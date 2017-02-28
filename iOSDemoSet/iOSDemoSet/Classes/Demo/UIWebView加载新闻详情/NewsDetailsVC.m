@@ -30,7 +30,7 @@
     
     UILabel *label = [UILabel new];
     label.backgroundColor = [UIColor whiteColor];
-    label.text = @"我是label";
+    label.text = @"我是label我是label我是label";
     [self.webView.scrollView addSubview:label];
     [label mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.webView);
