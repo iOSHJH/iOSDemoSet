@@ -1,0 +1,20 @@
+//
+//  PrefixHeader.pch
+//  iOSDemoSet
+//
+//  Created by 黄俊煌 on 2017/2/23.
+//  Copyright © 2017年 yunshi. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "Masonry.h"
+
+#ifdef DEBUG
+#define DLog(format, ...) NSLog( @"<%@:(%d)> %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(format),  ##__VA_ARGS__] )
+#else
+#define DLog(format, ...)
+#endif
+
+#endif /* PrefixHeader_pch */
