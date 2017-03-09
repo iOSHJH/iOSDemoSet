@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "SearchViewController.h"
 #import "NewsDetailsVC.h"
+#import "PageViewVC.h"
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -58,6 +59,10 @@
         cell.imageView.image = [UIImage imageNamed:@"addcontact_add_friends"];
         cell.textLabel.text = @"UIWebView加载新闻详情";
         cell.detailTextLabel.text = @"UIWebView加载新闻详情";
+    }else if (indexPath.row == 2) {
+        cell.imageView.image = [UIImage imageNamed:@"addcontact_add_friends"];
+        cell.textLabel.text = @"UIPageViewController";
+        cell.detailTextLabel.text = @"UIPageViewController的基本使用";
     }
     return cell;
 }
@@ -71,6 +76,9 @@
     }else if (indexPath.row == 1) { // UIWebView加载新闻详情
         NewsDetailsVC *vc = [NewsDetailsVC new];
         [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 2) { // UIPageViewController的基本使用
+        PageViewVC *pageVC = [PageViewVC new];
+        [self.navigationController pushViewController:pageVC animated:YES];
     }
 }
 
