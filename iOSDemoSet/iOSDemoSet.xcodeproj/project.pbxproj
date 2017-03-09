@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5C6C19AC08D46FF85DE2DEF6 /* libPods-iOSDemoSet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 809AA2F967CF26AA0355AA81 /* libPods-iOSDemoSet.a */; };
 		7F3BCEF21E7145CE007DE203 /* PageViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3BCEF11E7145CE007DE203 /* PageViewVC.m */; };
+		7F3BCEF41E71514C007DE203 /* newDetail.html in Resources */ = {isa = PBXBuildFile; fileRef = 7F3BCEF31E71514C007DE203 /* newDetail.html */; };
 		7FB6F9A01E5EDD00000C3B4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB6F99F1E5EDD00000C3B4B /* main.m */; };
 		7FB6F9A31E5EDD00000C3B4B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB6F9A21E5EDD00000C3B4B /* AppDelegate.m */; };
 		7FB6F9A61E5EDD00000C3B4B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB6F9A51E5EDD00000C3B4B /* ViewController.m */; };
@@ -24,6 +25,7 @@
 		57F140EBA035C0DECE5C066A /* Pods-iOSDemoSet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSDemoSet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSDemoSet/Pods-iOSDemoSet.debug.xcconfig"; sourceTree = "<group>"; };
 		7F3BCEF01E7145CE007DE203 /* PageViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewVC.h; sourceTree = "<group>"; };
 		7F3BCEF11E7145CE007DE203 /* PageViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewVC.m; sourceTree = "<group>"; };
+		7F3BCEF31E71514C007DE203 /* newDetail.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = newDetail.html; sourceTree = "<group>"; };
 		7FB6F99B1E5EDD00000C3B4B /* iOSDemoSet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDemoSet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB6F99F1E5EDD00000C3B4B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7FB6F9A11E5EDD00000C3B4B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 		7FB6F99E1E5EDD00000C3B4B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7F3BCEF31E71514C007DE203 /* newDetail.html */,
 				7FB6F99F1E5EDD00000C3B4B /* main.m */,
 			);
 			name = "Supporting Files";
@@ -253,6 +256,7 @@
 			files = (
 				7FB6F9AE1E5EDD00000C3B4B /* LaunchScreen.storyboard in Resources */,
 				7FB6F9AB1E5EDD00000C3B4B /* Assets.xcassets in Resources */,
+				7F3BCEF41E71514C007DE203 /* newDetail.html in Resources */,
 				7FB6F9A91E5EDD00000C3B4B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

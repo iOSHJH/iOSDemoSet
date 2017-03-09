@@ -10,6 +10,7 @@
 #define PrefixHeader_pch
 
 #import "Masonry.h"
+#import "SVProgressHUD.h"
 
 #ifdef DEBUG
 #define DLog(format, ...) NSLog( @"<%@:(%d)> %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(format),  ##__VA_ARGS__] )
