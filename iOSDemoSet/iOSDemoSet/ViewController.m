@@ -10,6 +10,7 @@
 #import "SearchViewController.h"
 #import "NewsDetailsVC.h"
 #import "PageViewVC.h"
+#import "PopoverVC.h"
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -63,6 +64,10 @@
         cell.imageView.image = [UIImage imageNamed:@"addcontact_add_friends"];
         cell.textLabel.text = @"UIPageViewController";
         cell.detailTextLabel.text = @"UIPageViewController的基本使用";
+    }else if (indexPath.row == 3) {
+        cell.imageView.image = [UIImage imageNamed:@"addcontact_add_friends"];
+        cell.textLabel.text = @"UIPopoverPresentationController";
+        cell.detailTextLabel.text = @"UIPopoverPresentationController的基本使用";
     }
     return cell;
 }
@@ -79,6 +84,9 @@
     }else if (indexPath.row == 2) { // UIPageViewController的基本使用
         PageViewVC *pageVC = [PageViewVC new];
         [self.navigationController pushViewController:pageVC animated:YES];
+    }else if (indexPath.row == 3) { // UIPopoverPresentationController的基本使用
+        PopoverVC *popoverVC = [PopoverVC new];
+        [self.navigationController pushViewController:popoverVC animated:YES];
     }
 }
 
