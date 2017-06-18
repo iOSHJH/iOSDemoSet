@@ -30,7 +30,9 @@
 
 - (void)viewWillAppear:(BOOL)animated {}
 - (void)didReceiveMemoryWarning {}
-- (void)dealloc {}
+- (void)dealloc {
+
+}
 
 #pragma mark - Public Methods
 
@@ -57,12 +59,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    NSLog(@"indexPath = %@",indexPath);
+    if (self.didSelectRowAtIndexPathBlock) {
+        self.didSelectRowAtIndexPathBlock(indexPath);
+    }
 }
 
+#pragma mark - 重写preferredContentSize，让popover返回你期望的大小
 
-
-//重写preferredContentSize，让popover返回你期望的大小
 - (CGSize)preferredContentSize {
     if (self.presentingViewController && self.tableView != nil) {
         CGSize tempSize = self.presentingViewController.view.bounds.size;

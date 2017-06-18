@@ -10,4 +10,6 @@
 
 @interface MenuVC : UIViewController
 
+@property (nonatomic, copy) void (^didSelectRowAtIndexPathBlock)(NSIndexPath *indexPath);
+
 @end

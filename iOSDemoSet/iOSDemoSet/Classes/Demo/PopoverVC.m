@@ -13,6 +13,8 @@
 
 @property (nonatomic, strong) MenuVC *menuVC;
 
+@property (nonatomic, strong) UIButton *button;
+
 @end
 
 @implementation PopoverVC
@@ -27,11 +29,15 @@
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"弹出" style:UIBarButtonItemStylePlain target:self action:@selector(popover)];
     
+    [self.view addSubview:self.button];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {}
 - (void)didReceiveMemoryWarning {}
-- (void)dealloc {}
+- (void)dealloc {
+
+}
 
 #pragma mark - Public Methods
 
@@ -67,17 +73,62 @@
 #pragma mark - Private Methods
 
 - (void)popover {
-    
-    self.menuVC = [[MenuVC alloc] init];
-    self.menuVC.modalPresentationStyle = UIModalPresentationPopover;
     self.menuVC.popoverPresentationController.barButtonItem = self.navigationItem.rightBarButtonItem;  //rect参数是以view的左上角为坐标原点（0，0）
-    self.menuVC.popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirectionUnknown; //箭头方向,如果是baritem不设置方向，会默认up，up的效果也是最理想的
-    self.menuVC.popoverPresentationController.delegate = self;
+    self.menuVC.popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirectionUnknown; //箭头方向 默认up
     [self presentViewController:self.menuVC animated:YES completion:nil];
-    
+}
+
+- (void)buttonClick {
+    self.menuVC.popoverPresentationController.sourceView = self.button;  //rect参数是以view的左上角为坐标原点（0，0）
+    self.menuVC.popoverPresentationController.sourceRect = self.button.bounds; //指定箭头所指区域的矩形框范围（位置和尺寸），以view的左上角为坐标原点
+    self.menuVC.popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirectionUp; //箭头方向
+
+    [self presentViewController:self.menuVC animated:YES completion:nil];
 }
 
 #pragma mark - Getter
+
+- (MenuVC *)menuVC {
+    if (_menuVC) {
+        return _menuVC;
+    }
+    _menuVC = [[MenuVC alloc] init];
+    _menuVC.modalPresentationStyle = UIModalPresentationPopover;
+    _menuVC.popoverPresentationController.delegate = self;
+    WeakSelf;
+    _menuVC.didSelectRowAtIndexPathBlock = ^(NSIndexPath *indexPath) {
+        switch (indexPath.row) {
+            case 0:
+                weakSelf.view.backgroundColor = [UIColor greenColor];
+                break;
+            case 1:
+                weakSelf.view.backgroundColor = [UIColor grayColor];
+                break;
+            case 2:
+                weakSelf.view.backgroundColor = [UIColor blueColor];
+                break;
+            case 3:
+                weakSelf.view.backgroundColor = [UIColor purpleColor];
+                break;
+            case 4:
+                weakSelf.view.backgroundColor = [UIColor yellowColor];
+                break;
+        }
+    };
+    
+    return _menuVC;
+}
+
+- (UIButton *)button {
+    if (_button) {
+        return _button;
+    }
+    _button = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 50, 30)];
+    [_button setBackgroundColor:[UIColor redColor]];
+    [_button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    return _button;
+}
 
 
 

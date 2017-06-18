@@ -18,4 +18,8 @@
 #define DLog(format, ...)
 #endif
 
+#define WeakSelf __weak typeof(self) weakSelf = self
+#define LRWeakSelf(type)  __weak typeof(type) weak##type = type;
+#define LRStrongSelf(type)  __strong typeof(type) strong##type = type;
+
 #endif /* PrefixHeader_pch */
