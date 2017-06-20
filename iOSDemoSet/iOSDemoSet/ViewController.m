@@ -12,6 +12,7 @@
 #import "PageViewVC.h"
 #import "PopoverVC.h"
 #import "ArrangeCellectionVC.h"
+#import "VisualEffectVC.h"
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -73,7 +74,12 @@
         cell.imageView.image = [UIImage imageNamed:@"addcontact_add_friends"];
         cell.textLabel.text = @"UICollectionView排列方式之算法初体验";
         cell.detailTextLabel.text = @"UICollectionView排列方式之算法初体验";
+    }else if (indexPath.row == 5) {
+        cell.imageView.image = [UIImage imageNamed:@"addcontact_add_friends"];
+        cell.textLabel.text = @"UIVisualEffectView";
+        cell.detailTextLabel.text = @"毛玻璃效果";
     }
+    
     return cell;
 }
 
@@ -94,6 +100,9 @@
         [self.navigationController pushViewController:popoverVC animated:YES];
     }else if (indexPath.row == 4) { // UICollectionView排列方式之算法初体验
         ArrangeCellectionVC *vc = [ArrangeCellectionVC new];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 5) { // 毛玻璃效果
+        VisualEffectVC *vc = [VisualEffectVC new];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
