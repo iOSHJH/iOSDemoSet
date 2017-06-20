@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5C6C19AC08D46FF85DE2DEF6 /* libPods-iOSDemoSet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 809AA2F967CF26AA0355AA81 /* libPods-iOSDemoSet.a */; };
+		7F2366731EF90B3B0045F8B8 /* ArrangeCellectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F23666B1EF90B3B0045F8B8 /* ArrangeCellectionVC.m */; };
+		7F2366741EF90B3B0045F8B8 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F23666D1EF90B3B0045F8B8 /* CollectionViewCell.m */; };
+		7F2366751EF90B3B0045F8B8 /* MenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2366701EF90B3B0045F8B8 /* MenuVC.m */; };
+		7F2366761EF90B3B0045F8B8 /* PopoverVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2366721EF90B3B0045F8B8 /* PopoverVC.m */; };
 		7F3BCEF21E7145CE007DE203 /* PageViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3BCEF11E7145CE007DE203 /* PageViewVC.m */; };
 		7F3BCEF41E71514C007DE203 /* newDetail.html in Resources */ = {isa = PBXBuildFile; fileRef = 7F3BCEF31E71514C007DE203 /* newDetail.html */; };
-		7F79B2E31EF59DAD008DF69D /* PopoverVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F79B2E21EF59DAD008DF69D /* PopoverVC.m */; };
-		7F79B2E61EF5AB2B008DF69D /* MenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F79B2E51EF5AB2B008DF69D /* MenuVC.m */; };
-		7FA065C01EF7B3D100769C80 /* ArrangeCellectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA065BF1EF7B3D100769C80 /* ArrangeCellectionVC.m */; };
-		7FA065C31EF7B62900769C80 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA065C21EF7B62900769C80 /* CollectionViewCell.m */; };
 		7FB6F9A01E5EDD00000C3B4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB6F99F1E5EDD00000C3B4B /* main.m */; };
 		7FB6F9A31E5EDD00000C3B4B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB6F9A21E5EDD00000C3B4B /* AppDelegate.m */; };
 		7FB6F9A61E5EDD00000C3B4B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB6F9A51E5EDD00000C3B4B /* ViewController.m */; };
@@ -27,17 +27,17 @@
 
 /* Begin PBXFileReference section */
 		57F140EBA035C0DECE5C066A /* Pods-iOSDemoSet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSDemoSet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSDemoSet/Pods-iOSDemoSet.debug.xcconfig"; sourceTree = "<group>"; };
+		7F23666A1EF90B3B0045F8B8 /* ArrangeCellectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrangeCellectionVC.h; sourceTree = "<group>"; };
+		7F23666B1EF90B3B0045F8B8 /* ArrangeCellectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrangeCellectionVC.m; sourceTree = "<group>"; };
+		7F23666C1EF90B3B0045F8B8 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		7F23666D1EF90B3B0045F8B8 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		7F23666F1EF90B3B0045F8B8 /* MenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuVC.h; sourceTree = "<group>"; };
+		7F2366701EF90B3B0045F8B8 /* MenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuVC.m; sourceTree = "<group>"; };
+		7F2366711EF90B3B0045F8B8 /* PopoverVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverVC.h; sourceTree = "<group>"; };
+		7F2366721EF90B3B0045F8B8 /* PopoverVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverVC.m; sourceTree = "<group>"; };
 		7F3BCEF01E7145CE007DE203 /* PageViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewVC.h; sourceTree = "<group>"; };
 		7F3BCEF11E7145CE007DE203 /* PageViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewVC.m; sourceTree = "<group>"; };
 		7F3BCEF31E71514C007DE203 /* newDetail.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = newDetail.html; sourceTree = "<group>"; };
-		7F79B2E11EF59DAD008DF69D /* PopoverVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverVC.h; sourceTree = "<group>"; };
-		7F79B2E21EF59DAD008DF69D /* PopoverVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverVC.m; sourceTree = "<group>"; };
-		7F79B2E41EF5AB2B008DF69D /* MenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuVC.h; sourceTree = "<group>"; };
-		7F79B2E51EF5AB2B008DF69D /* MenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuVC.m; sourceTree = "<group>"; };
-		7FA065BE1EF7B3D100769C80 /* ArrangeCellectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrangeCellectionVC.h; sourceTree = "<group>"; };
-		7FA065BF1EF7B3D100769C80 /* ArrangeCellectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrangeCellectionVC.m; sourceTree = "<group>"; };
-		7FA065C11EF7B62900769C80 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
-		7FA065C21EF7B62900769C80 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		7FB6F99B1E5EDD00000C3B4B /* iOSDemoSet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDemoSet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB6F99F1E5EDD00000C3B4B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7FB6F9A11E5EDD00000C3B4B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,6 +71,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F2366691EF90B3B0045F8B8 /* UICollectionView排列方式之算法初体验 */ = {
+			isa = PBXGroup;
+			children = (
+				7F23666A1EF90B3B0045F8B8 /* ArrangeCellectionVC.h */,
+				7F23666B1EF90B3B0045F8B8 /* ArrangeCellectionVC.m */,
+				7F23666C1EF90B3B0045F8B8 /* CollectionViewCell.h */,
+				7F23666D1EF90B3B0045F8B8 /* CollectionViewCell.m */,
+			);
+			path = "UICollectionView排列方式之算法初体验";
+			sourceTree = "<group>";
+		};
+		7F23666E1EF90B3B0045F8B8 /* UIPopoverPresentationController iOS 8 */ = {
+			isa = PBXGroup;
+			children = (
+				7F23666F1EF90B3B0045F8B8 /* MenuVC.h */,
+				7F2366701EF90B3B0045F8B8 /* MenuVC.m */,
+				7F2366711EF90B3B0045F8B8 /* PopoverVC.h */,
+				7F2366721EF90B3B0045F8B8 /* PopoverVC.m */,
+			);
+			path = "UIPopoverPresentationController iOS 8";
+			sourceTree = "<group>";
+		};
 		7F3BCEEF1E714483007DE203 /* UIPageViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,28 +100,6 @@
 				7F3BCEF11E7145CE007DE203 /* PageViewVC.m */,
 			);
 			path = UIPageViewController;
-			sourceTree = "<group>";
-		};
-		7F79B2E01EF59D3E008DF69D /* UIPopoverPresentationController */ = {
-			isa = PBXGroup;
-			children = (
-				7F79B2E11EF59DAD008DF69D /* PopoverVC.h */,
-				7F79B2E21EF59DAD008DF69D /* PopoverVC.m */,
-				7F79B2E41EF5AB2B008DF69D /* MenuVC.h */,
-				7F79B2E51EF5AB2B008DF69D /* MenuVC.m */,
-			);
-			name = UIPopoverPresentationController;
-			sourceTree = "<group>";
-		};
-		7FA065BD1EF7B34C00769C80 /* UICollectionView排列方式之算法初体验 */ = {
-			isa = PBXGroup;
-			children = (
-				7FA065BE1EF7B3D100769C80 /* ArrangeCellectionVC.h */,
-				7FA065BF1EF7B3D100769C80 /* ArrangeCellectionVC.m */,
-				7FA065C11EF7B62900769C80 /* CollectionViewCell.h */,
-				7FA065C21EF7B62900769C80 /* CollectionViewCell.m */,
-			);
-			name = "UICollectionView排列方式之算法初体验";
 			sourceTree = "<group>";
 		};
 		7FB6F9921E5EDD00000C3B4B = {
@@ -164,8 +164,8 @@
 				7FF0123C1E6437A1005D3720 /* UIWebView加载新闻详情 */,
 				7FB6F9BB1E5EE00B000C3B4B /* UISearchController的基本使用 */,
 				7F3BCEEF1E714483007DE203 /* UIPageViewController */,
-				7F79B2E01EF59D3E008DF69D /* UIPopoverPresentationController */,
-				7FA065BD1EF7B34C00769C80 /* UICollectionView排列方式之算法初体验 */,
+				7F2366691EF90B3B0045F8B8 /* UICollectionView排列方式之算法初体验 */,
+				7F23666E1EF90B3B0045F8B8 /* UIPopoverPresentationController iOS 8 */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -354,15 +354,15 @@
 			files = (
 				7FB6F9A61E5EDD00000C3B4B /* ViewController.m in Sources */,
 				7F3BCEF21E7145CE007DE203 /* PageViewVC.m in Sources */,
-				7F79B2E31EF59DAD008DF69D /* PopoverVC.m in Sources */,
-				7FA065C01EF7B3D100769C80 /* ArrangeCellectionVC.m in Sources */,
-				7F79B2E61EF5AB2B008DF69D /* MenuVC.m in Sources */,
 				7FB6F9A31E5EDD00000C3B4B /* AppDelegate.m in Sources */,
+				7F2366751EF90B3B0045F8B8 /* MenuVC.m in Sources */,
+				7F2366741EF90B3B0045F8B8 /* CollectionViewCell.m in Sources */,
+				7F2366731EF90B3B0045F8B8 /* ArrangeCellectionVC.m in Sources */,
 				7FB6F9A01E5EDD00000C3B4B /* main.m in Sources */,
 				7FB6F9C01E5EE00B000C3B4B /* ResultViewController.m in Sources */,
 				7FF0123F1E6437D3005D3720 /* NewsDetailsVC.m in Sources */,
-				7FA065C31EF7B62900769C80 /* CollectionViewCell.m in Sources */,
 				7FB6F9C11E5EE00B000C3B4B /* SearchViewController.m in Sources */,
+				7F2366761EF90B3B0045F8B8 /* PopoverVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
