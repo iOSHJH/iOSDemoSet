@@ -9,8 +9,13 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-#import "Masonry.h"
 #import "SVProgressHUD.h"
+// 只要添加了这个宏，就不用带mas_前缀
+#define MAS_SHORTHAND3
+// 只要添加了这个宏，equalTo就等价于mas_equalTo
+#define MAS_SHORTHAND_GLOBALS
+// 这个头文件一定要放在上面两个宏的后面
+#import "Masonry.h"
 
 #ifdef DEBUG
 #define DLog(format, ...) NSLog( @"<%@:(%d)> %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(format),  ##__VA_ARGS__] )
@@ -21,5 +26,10 @@
 #define WeakSelf __weak typeof(self) weakSelf = self
 #define LRWeakSelf(type)  __weak typeof(type) weak##type = type;
 #define LRStrongSelf(type)  __strong typeof(type) strong##type = type;
+
+#define ScreenWidth [UIScreen mainScreen].bounds.size.width
+#define ScreenHeight [UIScreen mainScreen].bounds.size.height
+
+#define RandomColor [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1]
 
 #endif /* PrefixHeader_pch */

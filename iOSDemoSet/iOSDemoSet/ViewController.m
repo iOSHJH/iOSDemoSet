@@ -11,6 +11,7 @@
 #import "NewsDetailsVC.h"
 #import "PageViewVC.h"
 #import "PopoverVC.h"
+#import "ArrangeCellectionVC.h"
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -42,7 +43,7 @@
 #pragma mark - UITableViewDataSource, UITableViewDelegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return 10;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -68,6 +69,10 @@
         cell.imageView.image = [UIImage imageNamed:@"addcontact_add_friends"];
         cell.textLabel.text = @"UIPopoverPresentationController";
         cell.detailTextLabel.text = @"UIPopoverPresentationController的基本使用";
+    }else if (indexPath.row == 4) {
+        cell.imageView.image = [UIImage imageNamed:@"addcontact_add_friends"];
+        cell.textLabel.text = @"UICollectionView排列方式之算法初体验";
+        cell.detailTextLabel.text = @"UICollectionView排列方式之算法初体验";
     }
     return cell;
 }
@@ -87,6 +92,9 @@
     }else if (indexPath.row == 3) { // UIPopoverPresentationController的基本使用
         PopoverVC *popoverVC = [PopoverVC new];
         [self.navigationController pushViewController:popoverVC animated:YES];
+    }else if (indexPath.row == 4) { // UICollectionView排列方式之算法初体验
+        ArrangeCellectionVC *vc = [ArrangeCellectionVC new];
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 
