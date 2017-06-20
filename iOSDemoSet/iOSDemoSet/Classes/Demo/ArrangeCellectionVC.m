@@ -21,9 +21,6 @@
 @property (nonatomic, strong) UICollectionView *arrangeCollectionView;
 @property (nonatomic, strong) NSArray *arrangedatas;
 
-/** 记录第几个奇数*/
-@property (nonatomic, assign) NSInteger oddNumCount;
-
 @end
 
 static NSString * const CollectionViewCellIdentifer = @"CollectionViewCellIdentifer";
@@ -44,8 +41,8 @@ static NSString * const CollectionViewCellIdentifer = @"CollectionViewCellIdenti
     [self.collectionView registerClass:[CollectionViewCell class] forCellWithReuseIdentifier:CollectionViewCellIdentifer];
     [self.arrangeCollectionView registerClass:[CollectionViewCell class] forCellWithReuseIdentifier:CollectionViewCellIdentifer];
     
-    // , @"5", @"6", @"7", @"8", @"9", @"10", @"11", @"12", @"13", @"14", @"15"
-    self.datas = @[@"0", @"1", @"2", @"3",@"4", @"5", @"6", @"7", @"8", @"9", @"10", @"11", @"12", @"13", @"14", @"15", @"16"];
+    // @[@"0", @"1", @"2", @"3",@"4", @"5", @"6", @"7", @"8", @"9", @"10", @"11", @"12", @"13", @"14", @"15", @"16"];
+    self.datas = @[@"0", @"4", @"1", @"5",@"2", @"6", @"3", @"7"];
     
     // [self leftRightTopBottomArrangeWithDatas:self.datas]
     self.arrangedatas = [self leftRightTopBottomArrangeWithDatas:self.datas];
@@ -54,6 +51,19 @@ static NSString * const CollectionViewCellIdentifer = @"CollectionViewCellIdenti
 - (void)viewWillAppear:(BOOL)animated {}
 - (void)didReceiveMemoryWarning {}
 - (void)dealloc {}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [super touchesBegan:touches withEvent:event];
+    
+    int a = 1;
+    int sum = 0;
+    
+    for (int i = 0; i < 5; i++) {
+        sum = i + a;
+        DLog(@"sum = %d",sum);
+    }
+    
+}
 
 #pragma mark - Public Methods
 
@@ -72,8 +82,10 @@ static NSString * const CollectionViewCellIdentifer = @"CollectionViewCellIdenti
     NSMutableArray *array = [NSMutableArray arrayWithArray:datas]; // 排列前数组
     // 计算还差多少位到达8的整数
     NSInteger cha = 8 - datas.count % 8;
-    for (int i = 0; i < cha; i++) {
-        [array addObject:@"i"];
+    if (cha < 8) {
+        for (int i = 0; i < cha; i++) {
+            [array addObject:@"i"];
+        }
     }
     
     NSMutableArray *lrtbArray = [NSMutableArray arrayWithArray:array]; // 排列后数组
