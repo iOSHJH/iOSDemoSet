@@ -93,6 +93,13 @@
 			path = "UIPopoverPresentationController iOS 8";
 			sourceTree = "<group>";
 		};
+		7F2366771EF90C1F0045F8B8 /* UISplitViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UISplitViewController;
+			sourceTree = "<group>";
+		};
 		7F3BCEEF1E714483007DE203 /* UIPageViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +173,7 @@
 				7F3BCEEF1E714483007DE203 /* UIPageViewController */,
 				7F2366691EF90B3B0045F8B8 /* UICollectionView排列方式之算法初体验 */,
 				7F23666E1EF90B3B0045F8B8 /* UIPopoverPresentationController iOS 8 */,
+				7F2366771EF90C1F0045F8B8 /* UISplitViewController */,
 			);
 			path = Demo;
 			sourceTree = "<group>";

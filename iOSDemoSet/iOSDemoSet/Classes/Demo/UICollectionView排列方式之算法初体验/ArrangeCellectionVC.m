@@ -42,7 +42,7 @@ static NSString * const CollectionViewCellIdentifer = @"CollectionViewCellIdenti
     [self.arrangeCollectionView registerClass:[CollectionViewCell class] forCellWithReuseIdentifier:CollectionViewCellIdentifer];
     
     // @[@"0", @"1", @"2", @"3",@"4", @"5", @"6", @"7", @"8", @"9", @"10", @"11", @"12", @"13", @"14", @"15", @"16"];
-    self.datas = @[@"0", @"4", @"1", @"5",@"2", @"6", @"3", @"7"];
+    self.datas = @[@"0", @"1", @"2", @"3",@"4", @"5", @"6", @"7", @"8", @"9", @"10", @"11", @"12", @"13", @"14", @"15", @"16"];
     
     // [self leftRightTopBottomArrangeWithDatas:self.datas]
     self.arrangedatas = [self leftRightTopBottomArrangeWithDatas:self.datas];
