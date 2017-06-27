@@ -1,0 +1,54 @@
+/*大图*/
+.bipic{background-repeat:no-repeat;background-position:50% 70%;height:70%;box-shadow:0 1px 3px rgba(100,100,100,.3);}
+
+/*白底边框*/
+.retew{width:100%;background:#fff;font-size:14px;box-shadow:0 1px 3px rgba(100,100,100,.3);-moz-box-shadow:0 1px 3px rgba(100,100,100,.3);-webkit-box-shadow:0 1px 3px rgba(100,100,100,.3)} 
+
+/*掌握要点*/
+.xtip{padding:10px 10px;line-height:180%;}
+
+/*材料表格*/
+.retamr{margin-left:1px;border-bottom:1px solid #e5e5e5;color:#999;}
+.retamr span{padding-right:10px;}
+.retamr td{border-top:1px solid #e5e5e5;padding:12px 0 12px 10px;}
+.retamr .mtim{background:#f8f8f8;color:#333;}
+.zfliao{font-weight:bold;font-size:17px;margin:0}
+/*材料表格的线*/
+.lirre{border-right:1px solid #e5e5e5;}
+/*材料链接*/
+a {color:#12937c;text-decoration:none;} 
+/*用量靠右*/
+.right{float:right}
+
+/*小贴士*/
+.xtieshi{margin:10px 10px 0px 10px;}
+.xtieshi h2{font-weight:bold;padding-bottom:0px;margin:0}
+.xtieshi p{line-height:180%;}
+
+/*步骤*/
+.pldc {padding-top:10px;}
+.pldc img {box-shadow:0 1px 3px rgba(10,10,10,.3);}
+.step h2{font-weight:bold;margin-left:10px;}	
+.step p{float:left;padding:0px;width:100%;word-wrap:break-word;}
+
+/*线*/
+body{background:#f8f8f7;}
+table{border-collapse:collapse;border-spacing:0;}
+h1{font-size:150%;font-weight:bold}
+h2{font-size:130%;font-weight:normal}
+h3,h4,h5,h6{font-size:100%;font-weight:normal}
+.clearfix:after{clear:both;content:".";display:block;font-size:0;}
+
+/*步骤小图的顶部间距*/
+/*掌握要点和大图的间距*/
+.mbm{margin-bottom:13px}
+
+/*步骤图片距离左边的间距*/
+.mll{margin-left:10px; margin-right:10px;}
+
+.fcbm {
+    color: rgb(18, 147, 124) !important;
+}
+
+/*每个步骤小图之间的线*/
+.libdm{border-bottom:1px solid #e5e5e5;}

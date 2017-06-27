@@ -11,5 +11,6 @@ pod 'Masonry'
 pod 'AFNetworking'
 pod 'SDWebImage'
 pod 'SVProgressHUD'
+pod 'YYModel', '~> 1.0.4'
 
 end

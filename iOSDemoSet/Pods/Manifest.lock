@@ -22,6 +22,7 @@ PODS:
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
   - SVProgressHUD (2.1.2)
+  - YYModel (1.0.4)
 
 DEPENDENCIES:
   - AFNetworking
@@ -29,6 +30,7 @@ DEPENDENCIES:
   - MLeaksFinder
   - SDWebImage
   - SVProgressHUD
+  - YYModel (~> 1.0.4)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -37,7 +39,8 @@ SPEC CHECKSUMS:
   MLeaksFinder: 0850e2f2abc7227adc4d4e2d1992b431264eb4d5
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 15ec5b29226b1e56644522fb1b985d72303a34ea
+PODFILE CHECKSUM: 417f3e73a53b3631fb1bd7c448e621e996f40146
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.1

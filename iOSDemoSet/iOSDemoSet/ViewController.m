@@ -13,6 +13,7 @@
 #import "PopoverVC.h"
 #import "ArrangeCellectionVC.h"
 #import "VisualEffectVC.h"
+#import "MenuSplitVC.h"
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -78,6 +79,10 @@
         cell.imageView.image = [UIImage imageNamed:@"addcontact_add_friends"];
         cell.textLabel.text = @"UIVisualEffectView";
         cell.detailTextLabel.text = @"毛玻璃效果";
+    }else if (indexPath.row == 6) {
+        cell.imageView.image = [UIImage imageNamed:@"addcontact_add_friends"];
+        cell.textLabel.text = @"UISplitViewController";
+        cell.detailTextLabel.text = @"UISplitViewController 菜谱实现";
     }
     
     return cell;
@@ -103,6 +108,9 @@
         [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row == 5) { // 毛玻璃效果
         VisualEffectVC *vc = [VisualEffectVC new];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 6) { // UISplitViewController
+        MenuSplitVC *vc = [MenuSplitVC new];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
