@@ -111,22 +111,14 @@
         VisualEffectVC *vc = [VisualEffectVC new];
         [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row == 6) { // UISplitViewController
-//        MenuSplitVC *vc = [MenuSplitVC new];
-//        [self.navigationController pushViewController:vc animated:YES];
-        
-        // 创建Master
         MenuSplitVC *menuSplitVC = [[MenuSplitVC alloc] init];
         UINavigationController *menuNav = [[UINavigationController alloc] initWithRootViewController:menuSplitVC];
         
-        // 创建Detail
         SubMenuSplitVC *subMenuSplitVC = [[SubMenuSplitVC alloc] init];
         UINavigationController *subMenuNav = [[UINavigationController alloc] initWithRootViewController:subMenuSplitVC];
         
-        // 创建split
         UISplitViewController *split = [[UISplitViewController alloc] init];
-        // 配置 master - detail
         split.viewControllers = @[menuNav, subMenuNav];
-        // 配置代理
         split.delegate = self;
         [self presentViewController:split animated:YES completion:nil];
     }
