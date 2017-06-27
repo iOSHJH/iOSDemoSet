@@ -9,6 +9,7 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
+#import "NSObject+Extension.h"
 #import "YYModel.h"
 #import "SVProgressHUD.h"
 // 只要添加了这个宏，就不用带mas_前缀

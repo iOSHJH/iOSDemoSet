@@ -857,6 +857,9 @@
 		7F2337D01F0207D6002E9C04 /* FootTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2337CF1F0207D6002E9C04 /* FootTypeModel.m */; };
 		7F2337D31F020823002E9C04 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2337D21F020823002E9C04 /* NSString+Extension.m */; };
 		7F2337D61F0208AC002E9C04 /* NSObject+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2337D51F0208AC002E9C04 /* NSObject+Extension.m */; };
+		7F2337D91F020F38002E9C04 /* SubMenuSplitVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2337D81F020F38002E9C04 /* SubMenuSplitVC.m */; };
+		7F2337DC1F020FC1002E9C04 /* FoodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2337DB1F020FC1002E9C04 /* FoodModel.m */; };
+		7F2337DF1F021605002E9C04 /* MenuDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2337DE1F021605002E9C04 /* MenuDetailVC.m */; };
 		7F2366731EF90B3B0045F8B8 /* ArrangeCellectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F23666B1EF90B3B0045F8B8 /* ArrangeCellectionVC.m */; };
 		7F2366741EF90B3B0045F8B8 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F23666D1EF90B3B0045F8B8 /* CollectionViewCell.m */; };
 		7F2366751EF90B3B0045F8B8 /* MenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2366701EF90B3B0045F8B8 /* MenuVC.m */; };
@@ -1730,6 +1733,12 @@
 		7F2337D21F020823002E9C04 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		7F2337D41F0208AC002E9C04 /* NSObject+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extension.h"; sourceTree = "<group>"; };
 		7F2337D51F0208AC002E9C04 /* NSObject+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Extension.m"; sourceTree = "<group>"; };
+		7F2337D71F020F38002E9C04 /* SubMenuSplitVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubMenuSplitVC.h; sourceTree = "<group>"; };
+		7F2337D81F020F38002E9C04 /* SubMenuSplitVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubMenuSplitVC.m; sourceTree = "<group>"; };
+		7F2337DA1F020FC1002E9C04 /* FoodModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodModel.h; sourceTree = "<group>"; };
+		7F2337DB1F020FC1002E9C04 /* FoodModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodModel.m; sourceTree = "<group>"; };
+		7F2337DD1F021605002E9C04 /* MenuDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuDetailVC.h; sourceTree = "<group>"; };
+		7F2337DE1F021605002E9C04 /* MenuDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuDetailVC.m; sourceTree = "<group>"; };
 		7F23666A1EF90B3B0045F8B8 /* ArrangeCellectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrangeCellectionVC.h; sourceTree = "<group>"; };
 		7F23666B1EF90B3B0045F8B8 /* ArrangeCellectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrangeCellectionVC.m; sourceTree = "<group>"; };
 		7F23666C1EF90B3B0045F8B8 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
@@ -2688,8 +2697,14 @@
 				7F23312F1F020734002E9C04 /* menuDatas */,
 				7F232A8D1F01F5EE002E9C04 /* MenuSplitVC.h */,
 				7F232A8E1F01F5EE002E9C04 /* MenuSplitVC.m */,
+				7F2337D71F020F38002E9C04 /* SubMenuSplitVC.h */,
+				7F2337D81F020F38002E9C04 /* SubMenuSplitVC.m */,
+				7F2337DD1F021605002E9C04 /* MenuDetailVC.h */,
+				7F2337DE1F021605002E9C04 /* MenuDetailVC.m */,
 				7F2337CE1F0207D6002E9C04 /* FootTypeModel.h */,
 				7F2337CF1F0207D6002E9C04 /* FootTypeModel.m */,
+				7F2337DA1F020FC1002E9C04 /* FoodModel.h */,
+				7F2337DB1F020FC1002E9C04 /* FoodModel.m */,
 			);
 			path = UISplitViewController;
 			sourceTree = "<group>";
@@ -3815,7 +3830,9 @@
 			files = (
 				7FB6F9A61E5EDD00000C3B4B /* ViewController.m in Sources */,
 				7F3BCEF21E7145CE007DE203 /* PageViewVC.m in Sources */,
+				7F2337D91F020F38002E9C04 /* SubMenuSplitVC.m in Sources */,
 				7F232A8F1F01F5EE002E9C04 /* MenuSplitVC.m in Sources */,
+				7F2337DF1F021605002E9C04 /* MenuDetailVC.m in Sources */,
 				7FB6F9A31E5EDD00000C3B4B /* AppDelegate.m in Sources */,
 				7F2366751EF90B3B0045F8B8 /* MenuVC.m in Sources */,
 				7F2366741EF90B3B0045F8B8 /* CollectionViewCell.m in Sources */,
@@ -3825,6 +3842,7 @@
 				7FB6F9C01E5EE00B000C3B4B /* ResultViewController.m in Sources */,
 				7F2337D31F020823002E9C04 /* NSString+Extension.m in Sources */,
 				7FF0123F1E6437D3005D3720 /* NewsDetailsVC.m in Sources */,
+				7F2337DC1F020FC1002E9C04 /* FoodModel.m in Sources */,
 				7F8550F01EF980DF00992881 /* VisualEffectVC.m in Sources */,
 				7FB6F9C11E5EE00B000C3B4B /* SearchViewController.m in Sources */,
 				7F2366761EF90B3B0045F8B8 /* PopoverVC.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import "MenuSplitVC.h"
 #import "FootTypeModel.h"
+#import "SubMenuSplitVC.h"
 
 @interface MenuSplitVC ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -22,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"菜谱";
+    self.title = @"菜谱分类";
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self.view addSubview:self.tableView];
@@ -48,7 +49,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    NSLog(@"indexPath = %@",indexPath);
+    SubMenuSplitVC *subMenu = [[SubMenuSplitVC alloc] init];
+    FootTypeModel *foodtype = self.footTypes[indexPath.row];
+    subMenu.foodType = foodtype;
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:subMenu];
+    [self.splitViewController showDetailViewController:nav sender:nil];
 }
 
 #pragma mark - getter
@@ -58,7 +63,6 @@
         return _tableView;
     }
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
-//    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _tableView.dataSource = self;
     _tableView.delegate = self;
     
@@ -69,18 +73,16 @@
     if (_footTypes) {
         return _footTypes;
     }
-    // 1. 获取plist文件的url
     NSURL *url  = [[NSBundle mainBundle] URLForResource:@"food_types" withExtension:@"plist"];
-    // 2. 通过url加载数组
     NSArray *dictArr = [NSArray arrayWithContentsOfURL:url];
-    // 3. 遍历数组中的字典
     NSMutableArray *array = [NSMutableArray array];
     for (NSDictionary *dict in dictArr) {
         FootTypeModel *model = [FootTypeModel yy_modelWithDictionary:dict];
         [array addObject:model];
     }
-   
-    return array;
+    _footTypes = array;
+    
+    return _footTypes;
 }
 
 
