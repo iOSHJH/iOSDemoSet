@@ -6,6 +6,10 @@
 //  Copyright © 2017年 yunshi. All rights reserved.
 //
 
+/*
+    WKWebView 参考：http://www.jianshu.com/p/84a6b1ac974a
+ */
+
 #import "MenuDetailVC.h"
 #import <WebKit/WebKit.h>
 #import "FoodModel.h"
@@ -68,6 +72,7 @@
  *
  */
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(null_unspecified WKNavigation *)navigation{
+    [SVProgressHUD show];
 }
 
 /**
@@ -87,7 +92,7 @@
  *
  */
 - (void)webView:(WKWebView *)webView didCommitNavigation:(null_unspecified WKNavigation *)navigation{
-    [SVProgressHUD show];
+    
 }
 
 /**
@@ -95,7 +100,7 @@
  *
  */
 - (void)webView:(WKWebView *)webView didFinishNavigation:(null_unspecified WKNavigation *)navigation{
-    [SVProgressHUD dismiss];
+    [SVProgressHUD dismissWithDelay:1.0];
 }
 
 /**
