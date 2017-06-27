@@ -11,8 +11,6 @@
 
 @interface PopoverVC ()<UIPopoverPresentationControllerDelegate>
 
-@property (nonatomic, strong) MenuVC *menuVC;
-
 @property (nonatomic, strong) UIButton *button;
 
 @end
@@ -73,30 +71,12 @@
 #pragma mark - Private Methods
 
 - (void)popover {
-    self.menuVC.popoverPresentationController.barButtonItem = self.navigationItem.rightBarButtonItem;  //rect参数是以view的左上角为坐标原点（0，0）
-    self.menuVC.popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirectionUnknown; //箭头方向 默认up
-    [self presentViewController:self.menuVC animated:YES completion:nil];
-}
-
-- (void)buttonClick {
-    self.menuVC.popoverPresentationController.sourceView = self.button;  //rect参数是以view的左上角为坐标原点（0，0）
-    self.menuVC.popoverPresentationController.sourceRect = self.button.bounds; //指定箭头所指区域的矩形框范围（位置和尺寸），以view的左上角为坐标原点
-    self.menuVC.popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirectionUp; //箭头方向
-
-    [self presentViewController:self.menuVC animated:YES completion:nil];
-}
-
-#pragma mark - Getter
-
-- (MenuVC *)menuVC {
-    if (_menuVC) {
-        return _menuVC;
-    }
-    _menuVC = [[MenuVC alloc] init];
-    _menuVC.modalPresentationStyle = UIModalPresentationPopover;
-    _menuVC.popoverPresentationController.delegate = self;
+    MenuVC *menuVC = [[MenuVC alloc] init];
+    menuVC.modalPresentationStyle = UIModalPresentationPopover;
+    menuVC.popoverPresentationController.delegate = self;
+    
     WeakSelf;
-    _menuVC.didSelectRowAtIndexPathBlock = ^(NSIndexPath *indexPath) {
+    menuVC.didSelectRowAtIndexPathBlock = ^(NSIndexPath *indexPath) {
         switch (indexPath.row) {
             case 0:
                 weakSelf.view.backgroundColor = [UIColor greenColor];
@@ -116,8 +96,45 @@
         }
     };
     
-    return _menuVC;
+    menuVC.popoverPresentationController.barButtonItem = self.navigationItem.rightBarButtonItem;  //rect参数是以view的左上角为坐标原点（0，0）
+    menuVC.popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirectionUnknown; //箭头方向 默认up
+    [self presentViewController:menuVC animated:YES completion:nil];
 }
+
+- (void)buttonClick {
+    MenuVC *menuVC = [[MenuVC alloc] init];
+    menuVC.modalPresentationStyle = UIModalPresentationPopover;
+    menuVC.popoverPresentationController.delegate = self;
+    
+    WeakSelf;
+    menuVC.didSelectRowAtIndexPathBlock = ^(NSIndexPath *indexPath) {
+        switch (indexPath.row) {
+            case 0:
+                weakSelf.view.backgroundColor = [UIColor greenColor];
+                break;
+            case 1:
+                weakSelf.view.backgroundColor = [UIColor grayColor];
+                break;
+            case 2:
+                weakSelf.view.backgroundColor = [UIColor blueColor];
+                break;
+            case 3:
+                weakSelf.view.backgroundColor = [UIColor purpleColor];
+                break;
+            case 4:
+                weakSelf.view.backgroundColor = [UIColor yellowColor];
+                break;
+        }
+    };
+    
+    menuVC.popoverPresentationController.sourceView = self.button;  //rect参数是以view的左上角为坐标原点（0，0）
+    menuVC.popoverPresentationController.sourceRect = self.button.bounds; //指定箭头所指区域的矩形框范围（位置和尺寸），以view的左上角为坐标原点
+    menuVC.popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirectionUp; //箭头方向
+
+    [self presentViewController:menuVC animated:YES completion:nil];
+}
+
+#pragma mark - Getter
 
 - (UIButton *)button {
     if (_button) {
