@@ -57,9 +57,13 @@
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     
     // 修改弹出样式
-    nav.modalPresentationStyle = UIModalPresentationPageSheet;
+//    nav.modalPresentationStyle = UIModalPresentationPageSheet;
     // 修改弹出效果
+//    nav.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    
+    nav.modalPresentationStyle = UIModalPresentationCurrentContext;
     nav.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    
     [self presentViewController:nav animated:YES completion:nil];
 }
 

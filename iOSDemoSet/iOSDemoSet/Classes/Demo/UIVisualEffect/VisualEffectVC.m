@@ -40,7 +40,7 @@
     if (_imageView) {
         return _imageView;
     }
-    _imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"aa"]];
+    _imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"planBG"]];
     
     return _imageView;
 }

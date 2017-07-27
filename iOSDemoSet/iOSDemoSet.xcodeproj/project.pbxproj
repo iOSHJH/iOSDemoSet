@@ -3970,6 +3970,7 @@
 				DEVELOPMENT_TEAM = 6FF75Z63XL;
 				GCC_PREFIX_HEADER = "$(SOURCE_ROOT)/$(PRODUCT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = iOSDemoSet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yunshi.iOSDemoSet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3984,6 +3985,7 @@
 				DEVELOPMENT_TEAM = 6FF75Z63XL;
 				GCC_PREFIX_HEADER = "$(SOURCE_ROOT)/$(PRODUCT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = iOSDemoSet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yunshi.iOSDemoSet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
