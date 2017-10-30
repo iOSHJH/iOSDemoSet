@@ -15,6 +15,8 @@
 #import "VisualEffectVC.h"
 #import "MenuSplitVC.h"
 #import "SubMenuSplitVC.h"
+#import "CommentVC.h"
+
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate, UISplitViewControllerDelegate>
 
@@ -84,6 +86,10 @@
         cell.imageView.image = [UIImage imageNamed:@"addcontact_add_friends"];
         cell.textLabel.text = @"UISplitViewController";
         cell.detailTextLabel.text = @"UISplitViewController 菜谱实现";
+    }else if (indexPath.row == 7) {
+        cell.imageView.image = [UIImage imageNamed:@"addcontact_add_friends"];
+        cell.textLabel.text = @"tableView 嵌套 tableView";
+        cell.detailTextLabel.text = @"难点在于计算cell的高度";
     }
     
     return cell;
@@ -121,6 +127,9 @@
         split.viewControllers = @[menuNav, subMenuNav];
         split.delegate = self;
         [self presentViewController:split animated:YES completion:nil];
+    }else if (indexPath.row == 7) { // tableView 嵌套 tableView
+        CommentVC *vc = [CommentVC new];
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 
