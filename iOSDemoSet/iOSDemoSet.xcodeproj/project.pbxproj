@@ -1818,6 +1818,8 @@
 		7F0042EE1FA6E10400AFE17C /* tableView嵌套tableView */ = {
 			isa = PBXGroup;
 			children = (
+				7F0042F51FA6E10400AFE17C /* CommentVC.h */,
+				7F0042F61FA6E10400AFE17C /* CommentVC.m */,
 				7F0042EF1FA6E10400AFE17C /* Comment.h */,
 				7F0042F01FA6E10400AFE17C /* Comment.m */,
 				7F0042F11FA6E10400AFE17C /* CommentInputView.h */,
@@ -1826,8 +1828,6 @@
 				7F0042F41FA6E10400AFE17C /* CommentTCell.m */,
 				7F0042FF1FA705DA00AFE17C /* ReplyTCell.h */,
 				7F0043001FA705DA00AFE17C /* ReplyTCell.m */,
-				7F0042F51FA6E10400AFE17C /* CommentVC.h */,
-				7F0042F61FA6E10400AFE17C /* CommentVC.m */,
 			);
 			path = "tableView嵌套tableView";
 			sourceTree = "<group>";

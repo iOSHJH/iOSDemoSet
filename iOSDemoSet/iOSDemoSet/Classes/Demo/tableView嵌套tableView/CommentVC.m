@@ -8,6 +8,12 @@
 
 /*
      本demo演示tableView 嵌套 tableView，难点在于计算cell高
+     计算行高遇到的坑：
+     cell里有一个动态的label，按照demo中的方式计算高度，可能会计算不对。
+     原因是label的约束width没有固定，导致系统无法计算出label的最大高度。
+     解决方法：
+         第一种、固定width的约束
+         第二种、设置label的最大宽度：Label.preferredMaxLayoutWidth = [UIScreen mainScreen].bounds.size.width - 80;
  */
 
 #define WeakSelf __weak typeof(self) weakSelf = self
