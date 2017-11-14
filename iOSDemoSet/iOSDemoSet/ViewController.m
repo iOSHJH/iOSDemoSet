@@ -16,6 +16,7 @@
 #import "MenuSplitVC.h"
 #import "SubMenuSplitVC.h"
 #import "CommentVC.h"
+#import "ChatVC.h"
 
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate, UISplitViewControllerDelegate>
@@ -90,6 +91,9 @@
         cell.imageView.image = [UIImage imageNamed:@"addcontact_add_friends"];
         cell.textLabel.text = @"tableView 嵌套 tableView";
         cell.detailTextLabel.text = @"难点在于计算cell的高度";
+    }else if (indexPath.row == 8) {
+        cell.imageView.image = [UIImage imageNamed:@"addcontact_add_friends"];
+        cell.textLabel.text = @"ChatKeyBoard(丰富的聊天键盘)";
     }
     
     return cell;
@@ -130,7 +134,11 @@
     }else if (indexPath.row == 7) { // tableView 嵌套 tableView
         CommentVC *vc = [CommentVC new];
         [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 8) { // ChatKeyBoard(丰富的聊天键盘)
+        ChatVC *vc = [ChatVC new];
+        [self.navigationController pushViewController:vc animated:YES];
     }
+    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
