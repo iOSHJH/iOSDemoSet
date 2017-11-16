@@ -15,6 +15,7 @@
 		7F0042FB1FA6E1D200AFE17C /* JHTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0042ED1FA6E0E500AFE17C /* JHTextView.m */; };
 		7F0042FE1FA7030200AFE17C /* NSObject+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0042FD1FA7030200AFE17C /* NSObject+Log.m */; };
 		7F0043011FA705DA00AFE17C /* ReplyTCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0043001FA705DA00AFE17C /* ReplyTCell.m */; };
+		7F086CA21FBD26C700311B37 /* ChatKeyBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F086CA11FBD26C700311B37 /* ChatKeyBoardView.m */; };
 		7F232A8F1F01F5EE002E9C04 /* MenuSplitVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F232A8E1F01F5EE002E9C04 /* MenuSplitVC.m */; };
 		7F2334811F020739002E9C04 /* recipe.css in Resources */ = {isa = PBXBuildFile; fileRef = 7F2331321F020734002E9C04 /* recipe.css */; };
 		7F2334821F020739002E9C04 /* 1.html in Resources */ = {isa = PBXBuildFile; fileRef = 7F2331341F020734002E9C04 /* 1.html */; };
@@ -873,7 +874,6 @@
 		7F2366761EF90B3B0045F8B8 /* PopoverVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2366721EF90B3B0045F8B8 /* PopoverVC.m */; };
 		7F3BCEF21E7145CE007DE203 /* PageViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3BCEF11E7145CE007DE203 /* PageViewVC.m */; };
 		7F3BCEF41E71514C007DE203 /* newDetail.html in Resources */ = {isa = PBXBuildFile; fileRef = 7F3BCEF31E71514C007DE203 /* newDetail.html */; };
-		7F666FFF1FBADDAD004D570C /* ChatKeyBoardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F666FFD1FBADDAD004D570C /* ChatKeyBoardVC.m */; };
 		7F6670021FBAE04F004D570C /* ChatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F6670011FBAE04F004D570C /* ChatVC.m */; };
 		7F8550F01EF980DF00992881 /* VisualEffectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F8550EF1EF980DF00992881 /* VisualEffectVC.m */; };
 		7FB6F9A01E5EDD00000C3B4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB6F99F1E5EDD00000C3B4B /* main.m */; };
@@ -903,6 +903,8 @@
 		7F0042FD1FA7030200AFE17C /* NSObject+Log.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Log.m"; sourceTree = "<group>"; };
 		7F0042FF1FA705DA00AFE17C /* ReplyTCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReplyTCell.h; sourceTree = "<group>"; };
 		7F0043001FA705DA00AFE17C /* ReplyTCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReplyTCell.m; sourceTree = "<group>"; };
+		7F086CA01FBD26C700311B37 /* ChatKeyBoardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatKeyBoardView.h; sourceTree = "<group>"; };
+		7F086CA11FBD26C700311B37 /* ChatKeyBoardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatKeyBoardView.m; sourceTree = "<group>"; };
 		7F232A8D1F01F5EE002E9C04 /* MenuSplitVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuSplitVC.h; sourceTree = "<group>"; };
 		7F232A8E1F01F5EE002E9C04 /* MenuSplitVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuSplitVC.m; sourceTree = "<group>"; };
 		7F2331321F020734002E9C04 /* recipe.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = recipe.css; sourceTree = "<group>"; };
@@ -1773,8 +1775,6 @@
 		7F3BCEF01E7145CE007DE203 /* PageViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewVC.h; sourceTree = "<group>"; };
 		7F3BCEF11E7145CE007DE203 /* PageViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewVC.m; sourceTree = "<group>"; };
 		7F3BCEF31E71514C007DE203 /* newDetail.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = newDetail.html; sourceTree = "<group>"; };
-		7F666FFD1FBADDAD004D570C /* ChatKeyBoardVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatKeyBoardVC.m; sourceTree = "<group>"; };
-		7F666FFE1FBADDAD004D570C /* ChatKeyBoardVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatKeyBoardVC.h; sourceTree = "<group>"; };
 		7F6670001FBAE04F004D570C /* ChatVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatVC.h; sourceTree = "<group>"; };
 		7F6670011FBAE04F004D570C /* ChatVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatVC.m; sourceTree = "<group>"; };
 		7F8550EE1EF980DF00992881 /* VisualEffectVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisualEffectVC.h; sourceTree = "<group>"; };
@@ -2774,8 +2774,8 @@
 		7F666FFC1FBADD4A004D570C /* ChatKeyBoard(丰富的聊天键盘) */ = {
 			isa = PBXGroup;
 			children = (
-				7F666FFE1FBADDAD004D570C /* ChatKeyBoardVC.h */,
-				7F666FFD1FBADDAD004D570C /* ChatKeyBoardVC.m */,
+				7F086CA01FBD26C700311B37 /* ChatKeyBoardView.h */,
+				7F086CA11FBD26C700311B37 /* ChatKeyBoardView.m */,
 				7F6670001FBAE04F004D570C /* ChatVC.h */,
 				7F6670011FBAE04F004D570C /* ChatVC.m */,
 			);
@@ -3907,9 +3907,9 @@
 				7F2337DF1F021605002E9C04 /* MenuDetailVC.m in Sources */,
 				7FB6F9A31E5EDD00000C3B4B /* AppDelegate.m in Sources */,
 				7F2366751EF90B3B0045F8B8 /* MenuVC.m in Sources */,
+				7F086CA21FBD26C700311B37 /* ChatKeyBoardView.m in Sources */,
 				7F2366741EF90B3B0045F8B8 /* CollectionViewCell.m in Sources */,
 				7F2366731EF90B3B0045F8B8 /* ArrangeCellectionVC.m in Sources */,
-				7F666FFF1FBADDAD004D570C /* ChatKeyBoardVC.m in Sources */,
 				7F2337D01F0207D6002E9C04 /* FootTypeModel.m in Sources */,
 				7FB6F9A01E5EDD00000C3B4B /* main.m in Sources */,
 				7F0043011FA705DA00AFE17C /* ReplyTCell.m in Sources */,
