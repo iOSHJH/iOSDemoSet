@@ -17,6 +17,7 @@
 #import "SubMenuSplitVC.h"
 #import "CommentVC.h"
 #import "ChatVC.h"
+#import "NewVesionTipsTool.h"
 
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate, UISplitViewControllerDelegate>
@@ -94,6 +95,10 @@
     }else if (indexPath.row == 8) {
         cell.imageView.image = [UIImage imageNamed:@"addcontact_add_friends"];
         cell.textLabel.text = @"ChatKeyBoard(丰富的聊天键盘)";
+    }else if (indexPath.row == 9) {
+        cell.imageView.image = [UIImage imageNamed:@"addcontact_add_friends"];
+        cell.textLabel.text = @"NewVesionTipsTool(版本更新)";
+        cell.detailTextLabel.text = @"提示有新版本，前往下载";
     }
     
     return cell;
@@ -137,6 +142,12 @@
     }else if (indexPath.row == 8) { // ChatKeyBoard(丰富的聊天键盘)
         ChatVC *vc = [ChatVC new];
         [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 9) {
+        [NewVesionTipsTool newVesionTipsUpdate:^(UIAlertController *alert) {
+            if (alert != nil) {
+                [self presentViewController:alert animated:YES completion:nil];
+            }
+        }];
     }
     
 }
