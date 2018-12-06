@@ -2782,13 +2782,13 @@
 			path = "ChatKeyBoard(丰富的聊天键盘)";
 			sourceTree = "<group>";
 		};
-		7F8550ED1EF97FAE00992881 /* UIVisualEffect */ = {
+		7F8550ED1EF97FAE00992881 /* UIVisualEffect(毛玻璃效果) */ = {
 			isa = PBXGroup;
 			children = (
 				7F8550EE1EF980DF00992881 /* VisualEffectVC.h */,
 				7F8550EF1EF980DF00992881 /* VisualEffectVC.m */,
 			);
-			path = UIVisualEffect;
+			path = "UIVisualEffect(毛玻璃效果)";
 			sourceTree = "<group>";
 		};
 		7FB6F9921E5EDD00000C3B4B = {
@@ -2858,7 +2858,7 @@
 				7F2366691EF90B3B0045F8B8 /* UICollectionView排列方式之算法初体验 */,
 				7F23666E1EF90B3B0045F8B8 /* UIPopoverPresentationController iOS 8 */,
 				7F2366771EF90C1F0045F8B8 /* UISplitViewController */,
-				7F8550ED1EF97FAE00992881 /* UIVisualEffect */,
+				7F8550ED1EF97FAE00992881 /* UIVisualEffect(毛玻璃效果) */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
