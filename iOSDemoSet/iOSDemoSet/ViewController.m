@@ -18,7 +18,8 @@
 #import "CommentVC.h"
 #import "ChatVC.h"
 #import "NewVesionTipsTool.h"
-
+#import "CycleTestVC.h"
+#import "TestJhButtonVC.h"
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate, UISplitViewControllerDelegate>
 
@@ -50,7 +51,7 @@
 #pragma mark - UITableViewDataSource, UITableViewDelegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return 15;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -99,6 +100,14 @@
         cell.imageView.image = [UIImage imageNamed:@"addcontact_add_friends"];
         cell.textLabel.text = @"NewVesionTipsTool(版本更新)";
         cell.detailTextLabel.text = @"提示有新版本，前往下载";
+    }else if (indexPath.row == 10) {
+        cell.imageView.image = [UIImage imageNamed:@"addcontact_add_friends"];
+        cell.textLabel.text = @"轮播图";
+        cell.detailTextLabel.text = @"轮播图";
+    }else if (indexPath.row == 11) {
+        cell.imageView.image = [UIImage imageNamed:@"addcontact_add_friends"];
+        cell.textLabel.text = @"JHButton";
+        cell.detailTextLabel.text = @"一键改变UIButton的title和image";
     }
     
     return cell;
@@ -148,6 +157,12 @@
                 [self presentViewController:alert animated:YES completion:nil];
             }
         }];
+    }else if (indexPath.row == 10) {
+        CycleTestVC *vc = [[CycleTestVC alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 11) {
+        TestJhButtonVC *vc = [[TestJhButtonVC alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
     }
     
 }
@@ -173,7 +188,6 @@
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     _tableView.dataSource = self;
     _tableView.delegate = self;
-    
     return _tableView;
 }
 

@@ -873,9 +873,13 @@
 		7F2366751EF90B3B0045F8B8 /* MenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2366701EF90B3B0045F8B8 /* MenuVC.m */; };
 		7F2366761EF90B3B0045F8B8 /* PopoverVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2366721EF90B3B0045F8B8 /* PopoverVC.m */; };
 		7F312F0721B8BCFB00D05690 /* NewVesionTipsTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F312F0521B8BCFB00D05690 /* NewVesionTipsTool.m */; };
+		7F312F6821BBA5D200D05690 /* JHCycleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F312F6721BBA5D200D05690 /* JHCycleView.m */; };
+		7F312F6E21BBB33900D05690 /* CycleTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F312F6D21BBB33900D05690 /* CycleTestVC.m */; };
 		7F3BCEF21E7145CE007DE203 /* PageViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3BCEF11E7145CE007DE203 /* PageViewVC.m */; };
 		7F3BCEF41E71514C007DE203 /* newDetail.html in Resources */ = {isa = PBXBuildFile; fileRef = 7F3BCEF31E71514C007DE203 /* newDetail.html */; };
 		7F6670021FBAE04F004D570C /* ChatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F6670011FBAE04F004D570C /* ChatVC.m */; };
+		7F703C7E222930F10063DE51 /* JHButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F703C7D222930F10063DE51 /* JHButton.m */; };
+		7F703C81222931270063DE51 /* TestJhButtonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F703C80222931270063DE51 /* TestJhButtonVC.m */; };
 		7F8550F01EF980DF00992881 /* VisualEffectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F8550EF1EF980DF00992881 /* VisualEffectVC.m */; };
 		7FB6F9A01E5EDD00000C3B4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB6F99F1E5EDD00000C3B4B /* main.m */; };
 		7FB6F9A31E5EDD00000C3B4B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB6F9A21E5EDD00000C3B4B /* AppDelegate.m */; };
@@ -1775,11 +1779,19 @@
 		7F2366721EF90B3B0045F8B8 /* PopoverVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverVC.m; sourceTree = "<group>"; };
 		7F312F0521B8BCFB00D05690 /* NewVesionTipsTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewVesionTipsTool.m; sourceTree = "<group>"; };
 		7F312F0621B8BCFB00D05690 /* NewVesionTipsTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewVesionTipsTool.h; sourceTree = "<group>"; };
+		7F312F6621BBA5D200D05690 /* JHCycleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHCycleView.h; sourceTree = "<group>"; };
+		7F312F6721BBA5D200D05690 /* JHCycleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHCycleView.m; sourceTree = "<group>"; };
+		7F312F6C21BBB33900D05690 /* CycleTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CycleTestVC.h; sourceTree = "<group>"; };
+		7F312F6D21BBB33900D05690 /* CycleTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CycleTestVC.m; sourceTree = "<group>"; };
 		7F3BCEF01E7145CE007DE203 /* PageViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewVC.h; sourceTree = "<group>"; };
 		7F3BCEF11E7145CE007DE203 /* PageViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewVC.m; sourceTree = "<group>"; };
 		7F3BCEF31E71514C007DE203 /* newDetail.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = newDetail.html; sourceTree = "<group>"; };
 		7F6670001FBAE04F004D570C /* ChatVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatVC.h; sourceTree = "<group>"; };
 		7F6670011FBAE04F004D570C /* ChatVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatVC.m; sourceTree = "<group>"; };
+		7F703C7C222930F10063DE51 /* JHButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHButton.h; sourceTree = "<group>"; };
+		7F703C7D222930F10063DE51 /* JHButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHButton.m; sourceTree = "<group>"; };
+		7F703C7F222931270063DE51 /* TestJhButtonVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestJhButtonVC.h; sourceTree = "<group>"; };
+		7F703C80222931270063DE51 /* TestJhButtonVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestJhButtonVC.m; sourceTree = "<group>"; };
 		7F8550EE1EF980DF00992881 /* VisualEffectVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisualEffectVC.h; sourceTree = "<group>"; };
 		7F8550EF1EF980DF00992881 /* VisualEffectVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisualEffectVC.m; sourceTree = "<group>"; };
 		7FB6F99B1E5EDD00000C3B4B /* iOSDemoSet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDemoSet.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2774,6 +2786,17 @@
 			path = "NewVesionTipsTool(版本更新)";
 			sourceTree = "<group>";
 		};
+		7F312F6521BBA59300D05690 /* JHCycleView轮播图 */ = {
+			isa = PBXGroup;
+			children = (
+				7F312F6621BBA5D200D05690 /* JHCycleView.h */,
+				7F312F6721BBA5D200D05690 /* JHCycleView.m */,
+				7F312F6C21BBB33900D05690 /* CycleTestVC.h */,
+				7F312F6D21BBB33900D05690 /* CycleTestVC.m */,
+			);
+			path = "JHCycleView轮播图";
+			sourceTree = "<group>";
+		};
 		7F3BCEEF1E714483007DE203 /* UIPageViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -2792,6 +2815,17 @@
 				7F6670011FBAE04F004D570C /* ChatVC.m */,
 			);
 			path = "ChatKeyBoard(丰富的聊天键盘)";
+			sourceTree = "<group>";
+		};
+		7F703C7B222930C50063DE51 /* JHButton */ = {
+			isa = PBXGroup;
+			children = (
+				7F703C7C222930F10063DE51 /* JHButton.h */,
+				7F703C7D222930F10063DE51 /* JHButton.m */,
+				7F703C7F222931270063DE51 /* TestJhButtonVC.h */,
+				7F703C80222931270063DE51 /* TestJhButtonVC.m */,
+			);
+			path = JHButton;
 			sourceTree = "<group>";
 		};
 		7F8550ED1EF97FAE00992881 /* UIVisualEffect(毛玻璃效果) */ = {
@@ -2862,6 +2896,8 @@
 		7FB6F9B61E5EDDEF000C3B4B /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				7F703C7B222930C50063DE51 /* JHButton */,
+				7F312F6521BBA59300D05690 /* JHCycleView轮播图 */,
 				7F312F0421B8BCFB00D05690 /* NewVesionTipsTool(版本更新) */,
 				7F666FFC1FBADD4A004D570C /* ChatKeyBoard(丰富的聊天键盘) */,
 				7F0042EE1FA6E10400AFE17C /* tableView嵌套tableView */,
@@ -2975,7 +3011,7 @@
 				TargetAttributes = {
 					7FB6F99A1E5EDD00000C3B4B = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 6FF75Z63XL;
+						DevelopmentTeam = U743496JMX;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -3927,8 +3963,12 @@
 				7FB6F9A01E5EDD00000C3B4B /* main.m in Sources */,
 				7F0043011FA705DA00AFE17C /* ReplyTCell.m in Sources */,
 				7FB6F9C01E5EE00B000C3B4B /* ResultViewController.m in Sources */,
+				7F312F6E21BBB33900D05690 /* CycleTestVC.m in Sources */,
 				7F2337D31F020823002E9C04 /* NSString+Extension.m in Sources */,
+				7F703C7E222930F10063DE51 /* JHButton.m in Sources */,
 				7FF0123F1E6437D3005D3720 /* NewsDetailsVC.m in Sources */,
+				7F312F6821BBA5D200D05690 /* JHCycleView.m in Sources */,
+				7F703C81222931270063DE51 /* TestJhButtonVC.m in Sources */,
 				7F2337DC1F020FC1002E9C04 /* FoodModel.m in Sources */,
 				7F0042FB1FA6E1D200AFE17C /* JHTextView.m in Sources */,
 				7F8550F01EF980DF00992881 /* VisualEffectVC.m in Sources */,
@@ -4059,7 +4099,7 @@
 			baseConfigurationReference = 57F140EBA035C0DECE5C066A /* Pods-iOSDemoSet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6FF75Z63XL;
+				DEVELOPMENT_TEAM = U743496JMX;
 				GCC_PREFIX_HEADER = "$(SOURCE_ROOT)/$(PRODUCT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = iOSDemoSet/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -4074,7 +4114,7 @@
 			baseConfigurationReference = C373EEFEDC8BF9DE1A54D4C2 /* Pods-iOSDemoSet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6FF75Z63XL;
+				DEVELOPMENT_TEAM = U743496JMX;
 				GCC_PREFIX_HEADER = "$(SOURCE_ROOT)/$(PRODUCT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = iOSDemoSet/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
