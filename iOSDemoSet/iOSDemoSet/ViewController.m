@@ -107,7 +107,7 @@
     }else if (indexPath.row == 11) {
         cell.imageView.image = [UIImage imageNamed:@"addcontact_add_friends"];
         cell.textLabel.text = @"JHButton";
-        cell.detailTextLabel.text = @"一键改变UIButton的title和image";
+        cell.detailTextLabel.text = @"一键改变UIButton的title和image的位置";
     }
     
     return cell;
