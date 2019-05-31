@@ -20,6 +20,7 @@
 #import "NewVesionTipsTool.h"
 #import "CycleTestVC.h"
 #import "TestJhButtonVC.h"
+#import "TZPhotoSelectorVC.h"
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate, UISplitViewControllerDelegate>
 
@@ -108,6 +109,10 @@
         cell.imageView.image = [UIImage imageNamed:@"addcontact_add_friends"];
         cell.textLabel.text = @"JHButton";
         cell.detailTextLabel.text = @"一键改变UIButton的title和image的位置";
+    }else if (indexPath.row == 12) {
+        cell.imageView.image = [UIImage imageNamed:@"addcontact_add_friends"];
+        cell.textLabel.text = @"图片选择器";
+        cell.detailTextLabel.text = @"图片选择器";
     }
     
     return cell;
@@ -162,6 +167,9 @@
         [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row == 11) {
         TestJhButtonVC *vc = [[TestJhButtonVC alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 12) {
+        TZPhotoSelectorVC *vc = [[TZPhotoSelectorVC alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
     
