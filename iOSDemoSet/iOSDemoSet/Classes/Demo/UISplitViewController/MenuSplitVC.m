@@ -54,11 +54,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    SubMenuSplitVC *subMenu = [[SubMenuSplitVC alloc] init];
-    FootTypeModel *foodtype = self.footTypes[indexPath.row];
-    subMenu.foodType = foodtype;
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:subMenu];
-    [self.splitViewController showDetailViewController:nav sender:nil];
+//    SubMenuSplitVC *subMenu = [[SubMenuSplitVC alloc] init];
+//    FootTypeModel *foodtype = self.footTypes[indexPath.row];
+//    subMenu.foodType = foodtype;
+//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:subMenu];
+//    [self.splitViewController showDetailViewController:nav sender:nil];
+    
+    [self.splitViewController.navigationController pushViewController:[UIViewController new] animated:YES];
 }
 
 #pragma mark - getter

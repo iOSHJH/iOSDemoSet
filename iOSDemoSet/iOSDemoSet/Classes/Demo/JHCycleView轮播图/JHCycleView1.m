@@ -1,0 +1,226 @@
+//
+//  JHCycleView1.m
+//  iOSDemoSet
+//
+//  Created by Ansjer on 2020/8/14.
+//  Copyright © 2020 yunshi. All rights reserved.
+//
+
+#import "JHCycleView1.h"
+
+@interface JHCycleView1()<UIScrollViewDelegate>
+
+@property (nonatomic, strong) NSArray *imageNames;
+@property (nonatomic, strong) NSArray *imageUrls;
+/// 表示中间显示第几张图片
+@property (nonatomic, assign) NSInteger currentIndex;
+/// 计时器
+@property (nonatomic, strong) NSTimer *autoScrollTimer;
+/// 指示器
+@property (nonatomic, strong) NSMutableArray *tipViews;
+@property (nonatomic, strong) UIView *currentTipView;
+/// 点击轮播图 回调
+@property (nonatomic, copy) void (^didSelectItemAtBlock)(NSInteger currentIndex);
+
+@property (nonatomic, strong) UIScrollView *scrollView;
+@property (nonatomic, strong) UIImageView *leftImageView;
+@property (nonatomic, strong) UIImageView *middleImageView;
+@property (nonatomic, strong) UIImageView *rightImageView;
+
+@end
+
+@implementation JHCycleView1
+
+- (instancetype)initWithFrame:(CGRect)frame imageNames:(NSArray *)imageNames imageUrls:(NSArray *)imageUrls
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.imageNames = imageNames;
+        self.imageUrls = imageUrls;
+        self.currentIndex = 0;
+        
+        NSInteger imageNamesCount = self.imageNames.count > 0 ? self.imageNames.count : 0;
+        NSInteger imageUrlsCount = self.imageUrls.count > 0 ? self.imageUrls.count : 0;
+        if (imageNamesCount > 1 || imageUrlsCount > 1) {
+            [self configureAutoScrollTimer];
+            [self resetImageViewSource];
+        }
+        [self initUI];
+    }
+    return self;
+}
+
+- (void)initUI {
+    [self addSubview:self.scrollView];
+    [self.scrollView addSubview:self.leftImageView];
+    [self.scrollView addSubview:self.middleImageView];
+    [self.scrollView addSubview:self.rightImageView];
+    
+    NSInteger count = self.imageNames.count > 0 ? self.imageNames.count : self.imageUrls.count;
+    
+    CGFloat width = 18;
+    CGFloat height = 1.4;
+    CGFloat space = 8;
+    CGFloat y = self.scrollView.bounds.size.height - 5;
+    CGFloat sunWidth = count * width + space*(count-1);// 指示器总范围
+    
+    for (int i = 0; i < count; i++) {
+        CGFloat x = (self.scrollView.bounds.size.width - sunWidth) * 0.5 + (width+space) * i;
+        UIView *tipView = [[UIView alloc] init];
+        tipView.frame = CGRectMake(x, y, width, height);
+        if (i == 0) {
+            self.currentTipView = tipView;
+            tipView.backgroundColor = UIColor.whiteColor;
+        }else {
+            tipView.backgroundColor = UIColor.lightGrayColor;
+        }
+        [self addSubview:tipView];
+        [self.tipViews addObject:tipView];
+    }
+}
+
+- (void)configureAutoScrollTimer {
+//    self.autoScrollTimer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(leftScroll) userInfo:nil repeats:YES];
+}
+
+- (void)resetImageViewSource {
+    NSInteger count = self.imageNames.count > 0 ? self.imageNames.count : self.imageUrls.count;
+    // //重新设置各个imageView的图片
+    if (self.currentIndex == 0) {
+        if (self.imageNames != nil) {
+            self.leftImageView.image = [UIImage imageNamed:self.imageNames.lastObject];
+            self.middleImageView.image = [UIImage imageNamed:self.imageNames[self.currentIndex]];
+            self.rightImageView.image = [UIImage imageNamed:self.imageNames[self.currentIndex+1]];
+        }else { // imageUrls
+            
+        }
+    }else if (self.currentIndex == count-1) {
+        if (self.imageNames != nil) {
+            self.leftImageView.image = [UIImage imageNamed:self.imageNames[self.currentIndex-1]];
+            self.middleImageView.image = [UIImage imageNamed:self.imageNames[self.currentIndex]];
+            self.rightImageView.image = [UIImage imageNamed:self.imageNames.firstObject];
+        }else { // imageUrls
+            
+        }
+    }else {
+        if (self.imageNames != nil) {
+            self.leftImageView.image = [UIImage imageNamed:self.imageNames[self.currentIndex-1]];
+            self.middleImageView.image = [UIImage imageNamed:self.imageNames[self.currentIndex]];
+            self.rightImageView.image = [UIImage imageNamed:self.imageNames[self.currentIndex+1]];
+        }else { // imageUrls
+            
+        }
+    }
+    
+    // 设置指示器
+    if (self.tipViews.count > 0) {
+        self.currentTipView.backgroundColor = UIColor.lightGrayColor;
+        UIView *tipView = self.tipViews[self.currentIndex];
+        self.currentTipView = tipView;
+        tipView.backgroundColor = UIColor.whiteColor;
+    }
+}
+
+- (void)leftScroll {
+    CGPoint offset = CGPointMake(2.0 * self.scrollView.frame.size.width, 0);
+    [self.scrollView setContentOffset:offset animated:YES];
+}
+
+- (void)tapAction {
+    if (self.didSelectItemAtBlock) {
+        self.didSelectItemAtBlock(self.currentIndex);
+    }
+}
+
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidScroll1:(UIScrollView *)scrollView {
+    //获取当前偏移量
+    CGFloat offset = scrollView.contentOffset.x;
+    CGFloat swidth = scrollView.bounds.size.width;
+    
+    if (self.imageNames.count != 0) {
+        //如果向左滑动（显示下一张）
+        if (offset >= swidth*2) {
+            // 还原偏移量
+            scrollView.contentOffset = CGPointMake(swidth, 0);
+            //视图索引+1
+            self.currentIndex = self.currentIndex + 1;
+            if (self.currentIndex == self.imageNames.count) {
+                self.currentIndex = 0;
+            }
+            [self resetImageViewSource];
+        }
+    }
+    //如果向右滑动（显示上一张）
+    if (offset <= 0) {
+        // 还原偏移量
+        scrollView.contentOffset = CGPointMake(swidth, 0);
+        //视图索引-1
+        self.currentIndex = self.currentIndex - 1;
+        
+        if (self.currentIndex == -1) {
+            self.currentIndex = self.imageNames.count - 1;
+        }
+        [self resetImageViewSource];
+    }
+}
+
+#pragma mark - get
+
+- (UIScrollView *)scrollView {
+    if (_scrollView) return _scrollView;
+    
+    _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(25, 0, self.bounds.size.width-50, self.bounds.size.height)];
+    _scrollView.pagingEnabled = YES;
+    
+    NSInteger count = self.imageNames.count > 0 ? self.imageNames.count : self.imageUrls.count;
+    if (count == 2) {
+        count = 3;
+    }
+    CGFloat width = (self.bounds.size.width) * count*50;
+    
+    _scrollView.delegate = self;
+    _scrollView.contentSize = CGSizeMake(width, self.bounds.size.height);
+    _scrollView.contentOffset = CGPointMake(_scrollView.frame.size.width, 0);
+//    _scrollView.backgroundColor = [UIColor brownColor];
+    _scrollView.showsHorizontalScrollIndicator = NO;
+    _scrollView.clipsToBounds = NO;
+    return _scrollView;
+}
+
+- (UIImageView *)leftImageView {
+    if (_leftImageView) return _leftImageView;
+    _leftImageView = [[UIImageView alloc] init];
+    _leftImageView.frame = CGRectMake(-12, 0, self.scrollView.frame.size.width, self.frame.size.height);
+    _leftImageView.layer.cornerRadius = 8;
+    _leftImageView.layer.masksToBounds = YES;
+    return _leftImageView;
+}
+
+- (UIImageView *)middleImageView {
+    if (_middleImageView) return _middleImageView;
+    _middleImageView = [[UIImageView alloc] init];
+    _middleImageView.frame = CGRectMake(self.scrollView.frame.size.width, 0, self.scrollView.frame.size.width, self.frame.size.height);
+    _middleImageView.layer.cornerRadius = 8;
+    _middleImageView.layer.masksToBounds = YES;
+    return _middleImageView;
+}
+
+- (UIImageView *)rightImageView {
+    if (_rightImageView) return _rightImageView;
+    _rightImageView = [[UIImageView alloc] init];
+    _rightImageView.frame = CGRectMake(self.scrollView.frame.size.width*2+12, 0, self.scrollView.frame.size.width, self.frame.size.height);
+    _rightImageView.layer.cornerRadius = 8;
+    _rightImageView.layer.masksToBounds = YES;
+    return _rightImageView;
+}
+
+- (NSMutableArray *)tipViews {
+    if (_tipViews) return _tipViews;
+    _tipViews = [NSMutableArray array];
+    return _tipViews;
+}
+
+@end
+

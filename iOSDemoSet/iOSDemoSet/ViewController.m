@@ -149,6 +149,7 @@
         UISplitViewController *split = [[UISplitViewController alloc] init];
         split.viewControllers = @[menuNav, subMenuNav];
         split.delegate = self;
+        split.modalTransitionStyle = UIModalPresentationFullScreen;
         [self presentViewController:split animated:YES completion:nil];
     }else if (indexPath.row == 7) { // tableView 嵌套 tableView
         CommentVC *vc = [CommentVC new];
