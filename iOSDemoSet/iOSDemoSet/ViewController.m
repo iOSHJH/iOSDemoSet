@@ -21,6 +21,7 @@
 #import "CycleTestVC.h"
 #import "TestJhButtonVC.h"
 #import "TZPhotoSelectorVC.h"
+#import "UIButton+Layout.h"
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate, UISplitViewControllerDelegate>
 
@@ -37,6 +38,18 @@
     
     self.title = @"demo集";
     [self.view addSubview:self.tableView];
+    
+    UIButton *giveToButton = [[UIButton alloc] init];
+    giveToButton.backgroundColor = UIColor.brownColor;
+    [giveToButton setTitle:@"赠送给" forState:(UIControlStateNormal)];
+    [giveToButton setTitleColor:UIColor.whiteColor forState:(UIControlStateNormal)];
+    [giveToButton setImage:[UIImage imageNamed:@"faceicon"] forState:(UIControlStateNormal)];
+    [self.view addSubview:giveToButton];
+    [giveToButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(self.view);
+        make.size.equalTo(CGSizeMake(200, 40));
+    }];
+    [giveToButton topTitle_bottomImage:10];
 }
 
 - (void)viewWillAppear:(BOOL)animated {}

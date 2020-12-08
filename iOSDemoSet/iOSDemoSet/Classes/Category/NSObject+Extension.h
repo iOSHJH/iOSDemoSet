@@ -10,6 +10,9 @@
 
 @interface NSObject (Extension)
 
+/** 打印对象的详细信息*/
+- (void)objDescription;
+
 /** 自动生成成员变量代码*/
 + (void)autoCreatePropertyCodeWithDict:(NSDictionary *)dict;
 
