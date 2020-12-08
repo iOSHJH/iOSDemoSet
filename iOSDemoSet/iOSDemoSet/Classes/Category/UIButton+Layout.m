@@ -15,12 +15,12 @@
 
 @implementation UIButton (Layout)
 
-- (void)leftImage_RightTitle:(CGFloat)spacing {
+- (void)leftImage_rightTitle:(CGFloat)spacing {
     self.titleEdgeInsets = UIEdgeInsetsMake(0.0,  0.0, 0.0,  - spacing/2);
     self.imageEdgeInsets = UIEdgeInsetsMake(0.0, - spacing/2, 0.0, 0.0);
 }
 
-- (void)leftTitle_RightImage:(CGFloat)spacing {
+- (void)leftTitle_rightImage:(CGFloat)spacing {
     CGSize imageSize = self.imageView.frame.size;
     CGSize titleSize = self.titleLabel.frame.size;
     self.titleEdgeInsets = UIEdgeInsetsMake(0.0, - imageSize.width, 0.0, imageSize.width + spacing/2);

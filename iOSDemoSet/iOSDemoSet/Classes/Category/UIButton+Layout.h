@@ -17,9 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIButton (Layout)
 
-- (void)leftImage_RightTitle:(CGFloat)spacing;
+- (void)leftImage_rightTitle:(CGFloat)spacing;
 
-- (void)leftTitle_RightImage:(CGFloat)spacing;
+- (void)leftTitle_rightImage:(CGFloat)spacing;
 
 - (void)topImage_bottomTitle:(CGFloat)spacing;
 
