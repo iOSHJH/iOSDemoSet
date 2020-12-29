@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F041A6A259AC0DF0024D8AA /* MJTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F041A68259AC0DF0024D8AA /* MJTimer.m */; };
 		0F3765C324E666D3007EF17F /* JHCycleView1.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F3765C224E666D3007EF17F /* JHCycleView1.m */; };
 		0F892EAE257F642A00FB0128 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F892EA4257F642900FB0128 /* UIView+Frame.m */; };
 		0F892EAF257F642B00FB0128 /* NSString+Verify.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F892EA5257F642900FB0128 /* NSString+Verify.m */; };
@@ -922,6 +923,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F041A68259AC0DF0024D8AA /* MJTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJTimer.m; sourceTree = "<group>"; };
+		0F041A69259AC0DF0024D8AA /* MJTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJTimer.h; sourceTree = "<group>"; };
 		0F3765C124E666D3007EF17F /* JHCycleView1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHCycleView1.h; sourceTree = "<group>"; };
 		0F3765C224E666D3007EF17F /* JHCycleView1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHCycleView1.m; sourceTree = "<group>"; };
 		0F892EA4257F642900FB0128 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
@@ -1912,6 +1915,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F041A66259AC0C20024D8AA /* MJTimer */ = {
+			isa = PBXGroup;
+			children = (
+				0F041A69259AC0DF0024D8AA /* MJTimer.h */,
+				0F041A68259AC0DF0024D8AA /* MJTimer.m */,
+			);
+			path = MJTimer;
+			sourceTree = "<group>";
+		};
 		7F0042EB1FA6E0E500AFE17C /* JHInputView */ = {
 			isa = PBXGroup;
 			children = (
@@ -3093,6 +3105,7 @@
 		7FB6F9B81E5EDDEF000C3B4B /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				0F041A66259AC0C20024D8AA /* MJTimer */,
 				7F0042EB1FA6E0E500AFE17C /* JHInputView */,
 			);
 			path = Library;
@@ -4129,6 +4142,7 @@
 				7F0042F71FA6E18100AFE17C /* Comment.m in Sources */,
 				7F232A8F1F01F5EE002E9C04 /* MenuSplitVC.m in Sources */,
 				7F2337DF1F021605002E9C04 /* MenuDetailVC.m in Sources */,
+				0F041A6A259AC0DF0024D8AA /* MJTimer.m in Sources */,
 				7FB6F9A31E5EDD00000C3B4B /* AppDelegate.m in Sources */,
 				7F2366751EF90B3B0045F8B8 /* MenuVC.m in Sources */,
 				7F086CA21FBD26C700311B37 /* ChatKeyBoardView.m in Sources */,
