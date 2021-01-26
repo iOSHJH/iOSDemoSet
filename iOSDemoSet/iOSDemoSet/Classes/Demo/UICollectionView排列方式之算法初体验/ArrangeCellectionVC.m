@@ -8,6 +8,7 @@
 
 #import "ArrangeCellectionVC.h"
 #import "CollectionViewCell.h"
+#import "UICollectionView+AJAnimation.h"
 
 @interface ArrangeCellectionVC ()<UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -33,6 +34,7 @@ static NSString * const CollectionViewCellIdentifer = @"CollectionViewCellIdenti
     [super viewDidLoad];
     
     self.title = @"";
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"列表动画" style:(UIBarButtonItemStyleDone) target:self action:@selector(reloadCollection)];
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self.view setBackgroundColor:[UIColor whiteColor]];
     
@@ -68,6 +70,11 @@ static NSString * const CollectionViewCellIdentifer = @"CollectionViewCellIdenti
 
 
 #pragma mark - Private Methods
+
+- (void)reloadCollection {
+    [self.collectionView moveLeftAnimation];
+    [self.arrangeCollectionView moveRightAnimation];
+}
 
 /*
      数组重新排列：

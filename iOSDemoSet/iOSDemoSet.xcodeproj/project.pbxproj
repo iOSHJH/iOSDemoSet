@@ -14,6 +14,8 @@
 		0F892EB0257F642B00FB0128 /* UIButton+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F892EA6257F642900FB0128 /* UIButton+Layout.m */; };
 		0F892EB1257F642B00FB0128 /* UIButton+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F892EA8257F642A00FB0128 /* UIButton+Action.m */; };
 		0F892EB2257F642B00FB0128 /* UIView+Gesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F892EAC257F642A00FB0128 /* UIView+Gesture.m */; };
+		0F983B6725BFF21D00B3F293 /* UITableView+AJAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F983B6625BFF21D00B3F293 /* UITableView+AJAnimation.m */; };
+		0F983B6B25BFF50B00B3F293 /* UICollectionView+AJAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F983B6A25BFF50B00B3F293 /* UICollectionView+AJAnimation.m */; };
 		5C6C19AC08D46FF85DE2DEF6 /* libPods-iOSDemoSet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 809AA2F967CF26AA0355AA81 /* libPods-iOSDemoSet.a */; };
 		7F0042F71FA6E18100AFE17C /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0042F01FA6E10400AFE17C /* Comment.m */; };
 		7F0042F81FA6E18400AFE17C /* CommentInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0042F21FA6E10400AFE17C /* CommentInputView.m */; };
@@ -937,6 +939,10 @@
 		0F892EAB257F642A00FB0128 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		0F892EAC257F642A00FB0128 /* UIView+Gesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Gesture.m"; sourceTree = "<group>"; };
 		0F892EAD257F642A00FB0128 /* UIButton+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Layout.h"; sourceTree = "<group>"; };
+		0F983B6525BFF21D00B3F293 /* UITableView+AJAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+AJAnimation.h"; sourceTree = "<group>"; };
+		0F983B6625BFF21D00B3F293 /* UITableView+AJAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+AJAnimation.m"; sourceTree = "<group>"; };
+		0F983B6925BFF50B00B3F293 /* UICollectionView+AJAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+AJAnimation.h"; sourceTree = "<group>"; };
+		0F983B6A25BFF50B00B3F293 /* UICollectionView+AJAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+AJAnimation.m"; sourceTree = "<group>"; };
 		57F140EBA035C0DECE5C066A /* Pods-iOSDemoSet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSDemoSet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSDemoSet/Pods-iOSDemoSet.debug.xcconfig"; sourceTree = "<group>"; };
 		7F0042EC1FA6E0E500AFE17C /* JHTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHTextView.h; sourceTree = "<group>"; };
 		7F0042ED1FA6E0E500AFE17C /* JHTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHTextView.m; sourceTree = "<group>"; };
@@ -3098,6 +3104,10 @@
 				7F2337D21F020823002E9C04 /* NSString+Extension.m */,
 				7F2337D41F0208AC002E9C04 /* NSObject+Extension.h */,
 				7F2337D51F0208AC002E9C04 /* NSObject+Extension.m */,
+				0F983B6525BFF21D00B3F293 /* UITableView+AJAnimation.h */,
+				0F983B6625BFF21D00B3F293 /* UITableView+AJAnimation.m */,
+				0F983B6925BFF50B00B3F293 /* UICollectionView+AJAnimation.h */,
+				0F983B6A25BFF50B00B3F293 /* UICollectionView+AJAnimation.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -4148,6 +4158,7 @@
 				7F086CA21FBD26C700311B37 /* ChatKeyBoardView.m in Sources */,
 				7F5DED6822A0CD5600CDCAD1 /* TZImageRequestOperation.m in Sources */,
 				0F3765C324E666D3007EF17F /* JHCycleView1.m in Sources */,
+				0F983B6725BFF21D00B3F293 /* UITableView+AJAnimation.m in Sources */,
 				7F5DED6222A0CD5600CDCAD1 /* TZImageManager.m in Sources */,
 				0F892EB0257F642B00FB0128 /* UIButton+Layout.m in Sources */,
 				7F2366741EF90B3B0045F8B8 /* CollectionViewCell.m in Sources */,
@@ -4170,6 +4181,7 @@
 				7F703C81222931270063DE51 /* TestJhButtonVC.m in Sources */,
 				7F5DED5922A0CD5600CDCAD1 /* TZImageCropManager.m in Sources */,
 				7F2337DC1F020FC1002E9C04 /* FoodModel.m in Sources */,
+				0F983B6B25BFF50B00B3F293 /* UICollectionView+AJAnimation.m in Sources */,
 				0F892EB2257F642B00FB0128 /* UIView+Gesture.m in Sources */,
 				7F5DED5B22A0CD5600CDCAD1 /* TZVideoPlayerController.m in Sources */,
 				7F0042FB1FA6E1D200AFE17C /* JHTextView.m in Sources */,

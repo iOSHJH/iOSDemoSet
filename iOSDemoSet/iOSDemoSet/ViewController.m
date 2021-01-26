@@ -22,6 +22,7 @@
 #import "TestJhButtonVC.h"
 #import "TZPhotoSelectorVC.h"
 #import "UIButton+Layout.h"
+#import "UITableView+AJAnimation.h"
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate, UISplitViewControllerDelegate>
 
@@ -37,19 +38,20 @@
     [super viewDidLoad];
     
     self.title = @"demo集";
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"列表动画" style:(UIBarButtonItemStyleDone) target:self action:@selector(reloadTable)];
     [self.view addSubview:self.tableView];
     
-    UIButton *giveToButton = [[UIButton alloc] init];
-    giveToButton.backgroundColor = UIColor.brownColor;
-    [giveToButton setTitle:@"赠送给" forState:(UIControlStateNormal)];
-    [giveToButton setTitleColor:UIColor.whiteColor forState:(UIControlStateNormal)];
-    [giveToButton setImage:[UIImage imageNamed:@"faceicon"] forState:(UIControlStateNormal)];
-    [self.view addSubview:giveToButton];
-    [giveToButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.center.equalTo(self.view);
-        make.size.equalTo(CGSizeMake(200, 40));
-    }];
-    [giveToButton topTitle_bottomImage:10];
+//    UIButton *giveToButton = [[UIButton alloc] init];
+//    giveToButton.backgroundColor = UIColor.brownColor;
+//    [giveToButton setTitle:@"赠送给" forState:(UIControlStateNormal)];
+//    [giveToButton setTitleColor:UIColor.whiteColor forState:(UIControlStateNormal)];
+//    [giveToButton setImage:[UIImage imageNamed:@"faceicon"] forState:(UIControlStateNormal)];
+//    [self.view addSubview:giveToButton];
+//    [giveToButton mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.center.equalTo(self.view);
+//        make.size.equalTo(CGSizeMake(200, 40));
+//    }];
+//    [giveToButton topTitle_bottomImage:10];
 }
 
 - (void)viewWillAppear:(BOOL)animated {}
@@ -62,6 +64,10 @@
 
 #pragma mark - Private Methods
 
+- (void)reloadTable {
+    [self.tableView moveLeftAnimation];
+}
+
 #pragma mark - UITableViewDataSource, UITableViewDelegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -73,6 +79,7 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
     }
+    
     
     if (indexPath.row == 0) {
         cell.imageView.image = [UIImage imageNamed:@"addcontact_add_friends"];
@@ -192,6 +199,22 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 80;
 }
+
+- (void)tableView:(UITableView *)tableView didUpdateFocusInContext:(UITableViewFocusUpdateContext *)context withAnimationCoordinator:(UIFocusAnimationCoordinator *)coordinator {
+    NSLog(@"animation");
+}
+
+//- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+//    CATransform3D transA = CATransform3DIdentity;
+//    transA.m34 = -1/500;
+//    transA = CATransform3DRotate(transA, M_PI_2, 1, 1, 0);
+//    cell.layer.transform = CATransform3DScale(transA, 0.1, 0.1, 1);;
+//    [UIView animateWithDuration:5 animations:^{
+//        cell.layer.transform = CATransform3DIdentity;
+//        cell.layer.cornerRadius = 10;
+//        cell.layer.masksToBounds = YES;
+//    }];
+//}
 
 #pragma mark - UISplitViewControllerDelegate
 
