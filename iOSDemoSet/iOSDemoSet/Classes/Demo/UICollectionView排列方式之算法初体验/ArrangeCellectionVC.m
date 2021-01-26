@@ -9,6 +9,7 @@
 #import "ArrangeCellectionVC.h"
 #import "CollectionViewCell.h"
 #import "UICollectionView+AJAnimation.h"
+#import "UIViewController+AJAnimation.h"
 
 @interface ArrangeCellectionVC ()<UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -21,6 +22,9 @@
 @property (nonatomic, strong) UILabel *arrangeTitleLabel;
 @property (nonatomic, strong) UICollectionView *arrangeCollectionView;
 @property (nonatomic, strong) NSArray *arrangedatas;
+
+@property (nonatomic, strong) UIButton *leftButton;
+@property (nonatomic, strong) UIButton *rightButton;
 
 @end
 
@@ -74,6 +78,8 @@ static NSString * const CollectionViewCellIdentifer = @"CollectionViewCellIdenti
 - (void)reloadCollection {
     [self.collectionView moveLeftAnimation];
     [self.arrangeCollectionView moveRightAnimation];
+    
+    
 }
 
 /*
@@ -142,6 +148,18 @@ static NSString * const CollectionViewCellIdentifer = @"CollectionViewCellIdenti
     [self.arrangeCollectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.arrangeTitleLabel.mas_bottom).offset(10);
         make.right.left.height.equalTo(self.collectionView);
+    }];
+    
+    [self.view addSubview:self.leftButton];
+    [self.leftButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(-60);
+        make.bottom.equalTo(-150);
+    }];
+    
+    [self.view addSubview:self.rightButton];
+    [self.rightButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(60);
+        make.bottom.equalTo(-150);
     }];
 }
 
@@ -240,7 +258,35 @@ static NSString * const CollectionViewCellIdentifer = @"CollectionViewCellIdenti
     return _arrangeTitleLabel;
 }
 
+- (UIButton *)leftButton {
+    if (_leftButton) return _leftButton;
+    _leftButton = [[UIButton alloc] init];
+    [_leftButton setTitle:@"左出动画" forState:(UIControlStateNormal)];
+    [_leftButton setTitleColor:UIColor.blackColor forState:(UIControlStateNormal)];
+    [_leftButton addTarget:self action:@selector(leftAction) forControlEvents:(UIControlEventTouchUpInside)];
+    return _leftButton;
+}
+
+- (UIButton *)rightButton {
+    if (_rightButton) return _rightButton;
+    _rightButton = [[UIButton alloc] init];
+    [_rightButton setTitle:@"右出动画" forState:(UIControlStateNormal)];
+    [_rightButton setTitleColor:UIColor.blackColor forState:(UIControlStateNormal)];
+    [_rightButton addTarget:self action:@selector(rightAction) forControlEvents:(UIControlEventTouchUpInside)];
+    return _rightButton;
+}
+
 
 #pragma mark - Setter
+
+#pragma mark - action
+
+- (void)leftAction {
+    [self moveLeftAnimation];
+}
+
+- (void)rightAction {
+    [self moveRightAnimation];
+}
 
 @end

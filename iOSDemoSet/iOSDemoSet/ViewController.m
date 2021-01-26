@@ -80,7 +80,6 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
     }
     
-    
     if (indexPath.row == 0) {
         cell.imageView.image = [UIImage imageNamed:@"addcontact_add_friends"];
         cell.textLabel.text = @"UISearchController的基本使用";

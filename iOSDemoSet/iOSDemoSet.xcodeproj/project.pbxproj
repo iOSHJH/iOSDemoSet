@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0F041A6A259AC0DF0024D8AA /* MJTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F041A68259AC0DF0024D8AA /* MJTimer.m */; };
+		0F26A5EA25C031C400FCA8B5 /* UIViewController+AJAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F26A5E925C031C400FCA8B5 /* UIViewController+AJAnimation.m */; };
 		0F3765C324E666D3007EF17F /* JHCycleView1.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F3765C224E666D3007EF17F /* JHCycleView1.m */; };
 		0F892EAE257F642A00FB0128 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F892EA4257F642900FB0128 /* UIView+Frame.m */; };
 		0F892EAF257F642B00FB0128 /* NSString+Verify.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F892EA5257F642900FB0128 /* NSString+Verify.m */; };
@@ -927,6 +928,8 @@
 /* Begin PBXFileReference section */
 		0F041A68259AC0DF0024D8AA /* MJTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJTimer.m; sourceTree = "<group>"; };
 		0F041A69259AC0DF0024D8AA /* MJTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJTimer.h; sourceTree = "<group>"; };
+		0F26A5E825C031C400FCA8B5 /* UIViewController+AJAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AJAnimation.h"; sourceTree = "<group>"; };
+		0F26A5E925C031C400FCA8B5 /* UIViewController+AJAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AJAnimation.m"; sourceTree = "<group>"; };
 		0F3765C124E666D3007EF17F /* JHCycleView1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHCycleView1.h; sourceTree = "<group>"; };
 		0F3765C224E666D3007EF17F /* JHCycleView1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHCycleView1.m; sourceTree = "<group>"; };
 		0F892EA4257F642900FB0128 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
@@ -1928,6 +1931,19 @@
 				0F041A68259AC0DF0024D8AA /* MJTimer.m */,
 			);
 			path = MJTimer;
+			sourceTree = "<group>";
+		};
+		0F26A5EC25C039B500FCA8B5 /* AJAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				0F983B6525BFF21D00B3F293 /* UITableView+AJAnimation.h */,
+				0F983B6625BFF21D00B3F293 /* UITableView+AJAnimation.m */,
+				0F983B6925BFF50B00B3F293 /* UICollectionView+AJAnimation.h */,
+				0F983B6A25BFF50B00B3F293 /* UICollectionView+AJAnimation.m */,
+				0F26A5E825C031C400FCA8B5 /* UIViewController+AJAnimation.h */,
+				0F26A5E925C031C400FCA8B5 /* UIViewController+AJAnimation.m */,
+			);
+			path = AJAnimation;
 			sourceTree = "<group>";
 		};
 		7F0042EB1FA6E0E500AFE17C /* JHInputView */ = {
@@ -3088,6 +3104,7 @@
 		7FB6F9B71E5EDDEF000C3B4B /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				0F26A5EC25C039B500FCA8B5 /* AJAnimation */,
 				0F892EA9257F642A00FB0128 /* NSString+Verify.h */,
 				0F892EA5257F642900FB0128 /* NSString+Verify.m */,
 				0F892EAA257F642A00FB0128 /* UIButton+Action.h */,
@@ -3104,10 +3121,6 @@
 				7F2337D21F020823002E9C04 /* NSString+Extension.m */,
 				7F2337D41F0208AC002E9C04 /* NSObject+Extension.h */,
 				7F2337D51F0208AC002E9C04 /* NSObject+Extension.m */,
-				0F983B6525BFF21D00B3F293 /* UITableView+AJAnimation.h */,
-				0F983B6625BFF21D00B3F293 /* UITableView+AJAnimation.m */,
-				0F983B6925BFF50B00B3F293 /* UICollectionView+AJAnimation.h */,
-				0F983B6A25BFF50B00B3F293 /* UICollectionView+AJAnimation.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -4181,6 +4194,7 @@
 				7F703C81222931270063DE51 /* TestJhButtonVC.m in Sources */,
 				7F5DED5922A0CD5600CDCAD1 /* TZImageCropManager.m in Sources */,
 				7F2337DC1F020FC1002E9C04 /* FoodModel.m in Sources */,
+				0F26A5EA25C031C400FCA8B5 /* UIViewController+AJAnimation.m in Sources */,
 				0F983B6B25BFF50B00B3F293 /* UICollectionView+AJAnimation.m in Sources */,
 				0F892EB2257F642B00FB0128 /* UIView+Gesture.m in Sources */,
 				7F5DED5B22A0CD5600CDCAD1 /* TZVideoPlayerController.m in Sources */,
