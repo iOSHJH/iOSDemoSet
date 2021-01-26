@@ -4,7 +4,7 @@
 //
 //  Created by Ansjer on 2021/1/26.
 //  Copyright © 2021 yunshi. All rights reserved.
-//
+//  https://github.com/alanwangmodify/TableViewAnimationKit
 
 #import "UITableView+AJAnimation.h"
 
