@@ -8,8 +8,8 @@
 
 #import "UITableView+AJAnimation.h"
 
-CGFloat const tableTotalTime = 1;
-CGFloat const tableDuration = 0.25;
+CGFloat const tableTotalTime = 5;
+CGFloat const tableDuration = 1;
 
 @implementation UITableView (AJAnimation)
 

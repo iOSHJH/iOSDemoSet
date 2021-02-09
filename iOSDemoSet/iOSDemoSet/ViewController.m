@@ -38,7 +38,8 @@
     [super viewDidLoad];
     
     self.title = @"demo集";
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"列表动画" style:(UIBarButtonItemStyleDone) target:self action:@selector(reloadTable)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"左动画" style:(UIBarButtonItemStyleDone) target:self action:@selector(leftAction)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"右动画" style:(UIBarButtonItemStyleDone) target:self action:@selector(rightAction)];
     [self.view addSubview:self.tableView];
     
 //    UIButton *giveToButton = [[UIButton alloc] init];
@@ -64,8 +65,12 @@
 
 #pragma mark - Private Methods
 
-- (void)reloadTable {
+- (void)leftAction {
     [self.tableView moveLeftAnimation];
+}
+
+- (void)rightAction {
+    [self.tableView moveRightAnimation];
 }
 
 #pragma mark - UITableViewDataSource, UITableViewDelegate

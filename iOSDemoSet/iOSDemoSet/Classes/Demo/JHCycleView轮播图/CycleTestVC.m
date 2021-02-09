@@ -31,7 +31,7 @@
     if (_cycleView) return _cycleView;
     CGRect rect = CGRectMake(0, 100, ScreenWidth, 200);
     NSArray *imageNames = @[@"1", @"2", @"3"];
-    _cycleView = [[JHCycleView alloc] initWithFrame:rect imageNames:imageNames imageUrls:nil];
+    _cycleView = [[JHCycleView alloc] initWithFrame:rect imageNames:imageNames imageUrls:nil isForbiddenCycleScroll:YES];
     return _cycleView;
 }
 

@@ -41,9 +41,9 @@
         
         if ([obj isKindOfClass:NSClassFromString(@"__NSCFString")] || [obj isKindOfClass:NSClassFromString(@"NSTaggedPointerString")]) {
             type = @"NSString";
-        }else if ([obj isKindOfClass:NSClassFromString(@"__NSCFArray")] || [obj isKindOfClass:NSClassFromString(@"__NSSingleObjectArrayI")]){
+        }else if ([obj isKindOfClass:NSClassFromString(@"__NSCFArray")] || [obj isKindOfClass:NSClassFromString(@"__NSSingleObjectArrayI")] || [obj isKindOfClass:NSClassFromString(@"__NSArrayM")]){
             type = @"NSArray";
-        }else if ([obj isKindOfClass:NSClassFromString(@"__NSCFNumber")]){
+        }else if ([obj isKindOfClass:NSClassFromString(@"__NSCFNumber")] || [obj isKindOfClass:NSClassFromString(@"__NSCFBoolean")]){
             type = @"NSNumber";
         }else if ([obj isKindOfClass:NSClassFromString(@"__NSCFDictionary")]){
             type = @"NSDictionary";

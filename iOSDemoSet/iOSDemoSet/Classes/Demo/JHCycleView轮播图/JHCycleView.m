@@ -17,8 +17,10 @@
 /// 计时器
 @property (nonatomic, strong) NSTimer *autoScrollTimer;
 /// 指示器
-@property (nonatomic, strong) NSMutableArray *tipViews;
+@property (nonatomic, strong) NSMutableArray<UIView *> *tipViews;
 @property (nonatomic, strong) UIView *currentTipView;
+/// 是否禁用循环滚动
+@property (nonatomic, assign) BOOL isForbiddenCycleScroll;
 /// 点击轮播图 回调
 @property (nonatomic, copy) void (^didSelectItemAtBlock)(NSInteger currentIndex);
 
@@ -31,18 +33,21 @@
 
 @implementation JHCycleView
 
-- (instancetype)initWithFrame:(CGRect)frame imageNames:(NSArray *)imageNames imageUrls:(NSArray *)imageUrls
+- (instancetype)initWithFrame:(CGRect)frame imageNames:(NSArray *)imageNames imageUrls:(NSArray *)imageUrls isForbiddenCycleScroll:(BOOL)isForbidden
 {
     self = [super initWithFrame:frame];
     if (self) {
         self.imageNames = imageNames;
         self.imageUrls = imageUrls;
         self.currentIndex = 0;
+        self.isForbiddenCycleScroll = isForbidden;
         
         NSInteger imageNamesCount = self.imageNames.count > 0 ? self.imageNames.count : 0;
         NSInteger imageUrlsCount = self.imageUrls.count > 0 ? self.imageUrls.count : 0;
         if (imageNamesCount > 1 || imageUrlsCount > 1) {
-            [self configureAutoScrollTimer];
+            if (isForbidden == NO) {
+                [self configureAutoScrollTimer];
+            }
             [self resetImageViewSource];
         }
         [self initUI];
@@ -135,32 +140,55 @@
 #pragma mark - UIScrollViewDelegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat count = self.imageUrls.count;
+    if (count < 1) {
+        count = self.imageNames.count;
+    }
+    if (count < 1) {
+        return;
+    }
     //获取当前偏移量
     CGFloat offset = scrollView.contentOffset.x;
     CGFloat swidth = scrollView.bounds.size.width;
     
-    if (self.imageNames.count != 0) {
-        //如果向左滑动（显示下一张）
-        if (offset >= swidth*2) {
-            // 还原偏移量
-            scrollView.contentOffset = CGPointMake(swidth, 0);
-            //视图索引+1
-            self.currentIndex = self.currentIndex + 1;
-            if (self.currentIndex == self.imageNames.count) {
-                self.currentIndex = 0;
+    if (self.isForbiddenCycleScroll == YES) {
+        if (self.currentIndex == 0) {
+            //如果向右滑动
+            if (offset < swidth) {
+                // 还原偏移量
+                scrollView.contentOffset = CGPointMake(swidth, 0);
             }
-            [self resetImageViewSource];
         }
+        if (self.currentIndex == count-1) {
+            // 如果向右滑动
+            if (offset > swidth) {
+                // 还原偏移量
+                scrollView.contentOffset = CGPointMake(swidth, 0);
+            }
+        }
+    }
+    
+    //如果向左滑动（显示下一张）
+    if (offset >= swidth*2) {
+        // 还原偏移量
+        scrollView.contentOffset = CGPointMake(swidth, 0);
+        //视图索引+1
+        self.currentIndex = self.currentIndex + 1;
+        if (self.currentIndex == count) {
+            self.currentIndex = 0;
+        }
+        [self resetImageViewSource];
     }
     //如果向右滑动（显示上一张）
     if (offset <= 0) {
         // 还原偏移量
         scrollView.contentOffset = CGPointMake(swidth, 0);
+        
         //视图索引-1
         self.currentIndex = self.currentIndex - 1;
         
         if (self.currentIndex == -1) {
-            self.currentIndex = self.imageNames.count - 1;
+            self.currentIndex = count - 1;
         }
         [self resetImageViewSource];
     }
@@ -172,11 +200,7 @@
     if (_scrollView) return _scrollView;
     _scrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
     _scrollView.pagingEnabled = YES;
-    NSInteger count = self.imageNames.count > 0 ? self.imageNames.count : self.imageUrls.count;
-    if (count == 2) {
-        count = 3;
-    }
-    CGFloat width = self.bounds.size.width * count;
+    CGFloat width = self.bounds.size.width * 3;
     _scrollView.delegate = self;
     _scrollView.contentSize = CGSizeMake(width, self.bounds.size.height);
     _scrollView.contentOffset = CGPointMake(_scrollView.frame.size.width, 0);

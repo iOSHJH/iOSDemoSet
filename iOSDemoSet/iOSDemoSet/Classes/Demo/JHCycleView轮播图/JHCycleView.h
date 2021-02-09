@@ -12,7 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JHCycleView : UIView
 
-- (instancetype)initWithFrame:(CGRect)frame imageNames:(NSArray *)imageNames imageUrls:(NSArray *)imageUrls;
+/// isForbiddenCycleScroll：是否禁用循环滚动
+- (instancetype)initWithFrame:(CGRect)frame imageNames:(NSArray *)imageNames imageUrls:(NSArray *)imageUrls isForbiddenCycleScroll:(BOOL)isForbidden;
 
 @end
 
